@@ -1,4 +1,7 @@
 <p style="color: green"><%= notice %></p>
+<p style="color: red"><%= alert %></p>
+
+ <%= button_to "Log out",  destroy_user_session_path, method: :delete %>
 
 <h1>Books</h1>
 
