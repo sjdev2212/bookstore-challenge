@@ -83,4 +83,4 @@ production:
   <<: *default
   database: bookstore_production
   username: bookstore
-  password: <%= ENV["BOOKSTORE_DATABASE_PASSWORD"] %>
+  url: <%= ENV['DATABASE_URL'] %>
