@@ -1,1 +1,28 @@
 @import "bootstrap";
+.books-cont{
+    background-color: rgb(16, 40, 92);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+        
+
+}
+.pagination{
+    background-color: rgb(71, 80, 160);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center  }
+
+    .pagination a {
+        color: whitesmoke;
+        font-size: 1.1vw;
+        font-weight: 700;
+    }

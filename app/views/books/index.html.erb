@@ -1,15 +1,25 @@
 <p style="color: green"><%= notice %></p>
 <p style="color: red"><%= alert %></p>
 
+
+<%if user_signed_in? %>
+
+
+
  <%= button_to "Log out",  destroy_user_session_path, method: :delete %>
 
-<h1>Books</h1>
+<%end%>
+
+<h1 class="d-flex justify-content-center pb-4 text-xl">BooksStore</h1>
 
 <div id="books">
   <% @books.each do |book| %>
     <%= render book %>
   
   <% end %>
+</div>
+<div class"pagination">
+<%= will_paginate @books %>
 </div>
 
 

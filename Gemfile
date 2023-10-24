@@ -50,6 +50,9 @@ gem 'devise', '~> 4.9', '>= 4.9.3'
 
 gem 'bigdecimal'
 
+gem 'will_paginate', '~> 4.0'
+
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 

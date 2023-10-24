@@ -1,8 +1,15 @@
-<div id="<%= dom_id book %>">
-    <h2><%= book.title %></h2>
-    <p><%= book.author %></p>
-    <p><%= book.isbn %></p>
-    <p><%= book.date_of_publication %></p>
-    <p><%= book.review %></p>
-    <p><%= book.price %></p>
+
+
+<section id="<%= dom_id book %>" class="books-cont">
+<div class="card mb-2 " style="width: 60rem;">
+  <div class="card-body d-flex flex-column align-items-center ">
+    <h1 class="card-title "><%= book.title %></h1>
+    <h3 class="card-subtitle mb-2 text-muted"> Author: <%= book.author_name %></h3>
+    <h5 class="card-subtitle mb-2 text-muted">Isbn: <%= book.isbn %> </h5>
+    <h5 class="card-subtitle mb-2 text-muted">Date of publication: <%= book.date_of_publication %></h5>
+     <p class="card-text"><%= book.review %></p>
+     <p>Price: $<%= book.price %></p>
+  
+  </div>
 </div>
+</section>
