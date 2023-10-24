@@ -1,0 +1,49 @@
+<h1>Add Author</h1>
+
+
+<% if @author.present? %>
+  <%= form_for [@author] do |f| %>
+    <% if @author.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@author.errors.count, "error") %> prohibited this author from being saved:</h2>
+
+        <ul>
+        <% @author.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :first_name %>
+      <%= f.text_field :first_name %>
+    </div>
+      <div class="field">
+      <%= f.label :last_name %>
+      <%= f.text_field :last_name %>
+    </div>
+         <div class="field">
+      <%= f.label :date_of_birth %>
+   <%= f.date_field :date_of_birth %>
+    </div>
+         <div class="field">
+      <%= f.label :about %>
+      <%= f.text_area :about %>
+    </div>
+         <div class="field">
+      <%= f.label :nationality %>
+      <%= f.text_field  :nationality %>
+    </div>
+     
+    
+
+    <%= f.submit "Add Author" %>
+  <% end %>
+<% else %>
+  <p>aca esta el error</p>
+<% end %>
+
+<div>
+  <%= link_to "Home", root_path %>
+</div>
