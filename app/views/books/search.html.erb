@@ -1,0 +1,10 @@
+<% if @books.any? %>
+  <h2>Search Results</h2>
+  <ul>
+    <% @books.each do |book| %>
+      <li><%= link_to book.title, book %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No books found.</p>
+<% end %>

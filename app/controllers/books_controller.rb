@@ -3,7 +3,18 @@ class BooksController < ApplicationController
 
   # GET /books or /books.json
   def index
+
+   
     @books = Book.paginate(page: params[:page], per_page: 3)
+
+
+  end
+  def search
+    if params[:title_query].present?
+      @books = Book.where('title ILIKE  ?', "%#{params[:title_query]}%")
+    else
+      @books = Book.all
+    end
   end
 
   # GET /books/1 or /books/1.json
