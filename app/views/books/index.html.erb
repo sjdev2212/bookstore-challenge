@@ -1,20 +1,27 @@
-<p style="color: green"><%= notice %></p>
-<p style="color: red"><%= alert %></p>
+
 
 
 <%if user_signed_in? %>
-<%= button_to "Log out",  destroy_user_session_path, method: :delete %>
+<div class="btn-cont">
+
+<%= button_to "Log out",  destroy_user_session_path, method: :delete, class:"btn btn-primary " %>
+</div>
+<%else%>
+<%= link_to "Log in", new_user_session_path %>
+<%= link_to "Sign up", new_user_registration_path %>
+
+<%end%>
+<% if can?  :manage, @books, @authors   %>
+ <%= render partial: "admin/admin_panel" %>
 <%end%>
 
 
+<p style="color: blue"><%= notice %></p>
+<p style="color: red"><%= alert %></p>
 
 
-<%= form_tag(search_books_path, method: :get) do %>
-  <%= text_field_tag :title_query, params[:title_query] %>
-  <%= submit_tag "Search" %>
-<% end %>
 
-<h1 class="d-flex justify-content-center pb-4 text-xl">BooksStore</h1>
+<h1 class="d-flex justify-content-center mb-5 fw-bold fs-1">BooksStore</h1>
 
 <div id="books">
   <% @books.each do |book| %>
