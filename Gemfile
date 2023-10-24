@@ -52,6 +52,8 @@ gem 'bigdecimal'
 
 gem 'will_paginate', '~> 4.0'
 
+gem 'cancancan'
+
 
 # Use Sass to process CSS
 # gem "sassc-rails"
