@@ -2,9 +2,28 @@ class BooksController < ApplicationController
   load_and_authorize_resource 
 
   # GET /books or /books.json
-  def index
-@books = Book.paginate(page: params[:page], per_page: 3)
+
+
+def index
+  @search = params[:search]
+  @search_by = params[:search_by]
+  @books = Book.paginate(page: params[:page], per_page: 3)
+
+  if @search.present?
+    case @search_by
+    when 'Title'
+      @books = @books.where('title ILIKE ?', "%#{@search}%")
+    when 'ISBN'
+      @books = @books.where('CAST(isbn AS text) LIKE ?', "%#{@search}%")
+    when 'Author'
+      @books = @books.joins(:author).where('authors.first_name ILIKE ? OR authors.last_name ILIKE ?', "%#{@search}%", "%#{@search}%")
+    when 'Publisher'
+      @books = @books.joins(:publisher).where('publishers.name ILIKE ?', "%#{@search}%")
+    end
+  end
 end
+
+
 
 
   # GET /books/1 or /books/1.json

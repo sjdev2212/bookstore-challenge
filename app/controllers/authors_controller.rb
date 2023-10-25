@@ -1,6 +1,15 @@
 class AuthorsController < ApplicationController
     def index
-        @authors = Author.all
+        @authors = Author.includes(:books).paginate(page: params[:page], per_page: 10)
+        @search = params[:search]
+      
+        if @search.present?
+            @authors =
+                Author
+                .where('authors.first_name ILIKE ? OR authors.last_name ILIKE ?', "%#{@search}%", "%#{@search}%")
+                .paginate(page: params[:page], per_page: 10)
+            end
+            
     end
     def show
         @author = Author.find(params[:id])

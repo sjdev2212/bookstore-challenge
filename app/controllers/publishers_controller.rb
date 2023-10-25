@@ -1,6 +1,14 @@
 class PublishersController < ApplicationController
     def index
         @publishers = Publisher.all
+        @search = params[:search]
+      
+        if @search.present?
+            @publishers =
+                Publisher
+                .where('publishers.name ILIKE ?', "%#{@search}%")
+                .paginate(page: params[:page], per_page: 10)
+            end
     end
     def show 
         @publisher = Publisher.find(params[:id])

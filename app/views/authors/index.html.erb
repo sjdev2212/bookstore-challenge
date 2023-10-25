@@ -1,10 +1,18 @@
+
+<
+
 <%if @authors.empty?%> 
     <p>There are no authors yet</p>
 <%else%>
+div>
+
+ <%= render partial:  "authors/search" %>
+</div>
 
 
 <%  @authors.each do |author| %>
 <%= link_to  author.last_name , author_path(author)%>
+   <p>Associated books: <%= author.associated_books %></p>
 <% end%>
 <%end%>
 

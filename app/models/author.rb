@@ -7,5 +7,15 @@ class Author < ApplicationRecord
     validates :date_of_birth, presence: true
     validates :about, presence: true
 
+def author_age 
+    if date_of_birth.present?
+        age = Date.today.year - date_of_birth.year
+        age -= 1 if Date.today < date_of_birth + age.years
+        age
+    end
+end
+def associated_books
+   number_of_books = books.count
 
+end 
 end
