@@ -1,15 +1,18 @@
 Rails.application.routes.draw do
   devise_for :users
+
+
+  resources :publishers do
+    resources :authors
+  end
+  
   resources :authors do
-    resources :books do
-      collection do
-        get 'search'
-      end
-   
+    resources :books
   end
  
-  end
-  resources :books, only: [:new, :create]
+  
+  resources :books
+  resources :authors
   
   
 

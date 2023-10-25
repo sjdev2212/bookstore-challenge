@@ -1,4 +1,14 @@
+<%if @authors.empty?%> 
+    <p>There are no authors yet</p>
+<%else%>
+
+
 <%  @authors.each do |author| %>
 <%= link_to  author.last_name , author_path(author)%>
 <% end%>
+<%end%>
+
+<%= link_to "Add new author", new_author_path %>
+
+
 

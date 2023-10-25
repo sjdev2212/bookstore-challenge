@@ -11,16 +11,17 @@ class AuthorsController < ApplicationController
 
      
    
-    def create
-        author = Author.new(author_params)
-        if author.save
-            redirect_to root_path
-        else
-            render :new
-        end
-    end
+        def create
+            @author = Author.new(author_params)
+            if @author.save
+              redirect_to root_path
+            else
+              render :new
+            end
+          end
+          
     def edit
-        @book = Book.find(params[:id])
+       @author = Author.find(params[:id])
     end
     def update
         author = Author.find(params[:id])
@@ -37,7 +38,7 @@ class AuthorsController < ApplicationController
     end
     private
     def author_params
-        params.require(:author).permit(:first_name, :last_name, :date_of_birth, :about , :nationality)
+        params.require(:author).permit(:first_name, :last_name, :date_of_birth, :about , :nationality, :publisher_id)
     end
 
 end

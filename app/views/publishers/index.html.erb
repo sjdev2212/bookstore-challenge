@@ -1,0 +1,23 @@
+<div>
+    <h1>Publishers</h1>
+    <% if @publishers.empty? %>
+     <h2>There are no publishers yet</h2>
+      
+       <%else%>
+  <% @publishers.each do |publisher| %>
+    <div class="publisher">
+      <h2><%= publisher.name %></h2>
+      <%= link_to "update publisher" , edit_publisher_path(publisher.id) %>
+        <%= button_to "Delete publisher ", publisher, method: :delete %>
+        
+    
+    
+    </div>
+
+  
+  <% end %>
+ 
+   
+<% end %>
+  <%= link_to "Add a publisher", new_publisher_path %>
+</div>

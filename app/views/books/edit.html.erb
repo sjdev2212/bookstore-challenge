@@ -1,6 +1,34 @@
 <h1>Editing book</h1>
+<%= form_for @book do |f| %>
+ <div class="field">
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </div>
+      <div class="field">
+      <%= f.label :isbn %>
+      <%= f.number_field :isbn %>
+    </div>
+         <div class="field">
+      <%= f.label :author_name %>
+   <%= f.text_field :author_name, value: @full_name, readonly: true %>
+    </div>
+         <div class="field">
+      <%= f.label :review %>
+      <%= f.text_area :review %>
+    </div>
+         <div class="field">
+      <%= f.label :date_of_publication %>
+      <%= f.date_field  :date_of_publication %>
+    </div>
+        <div class="field">
+      <%= f.label :price %>
+      <%= f.number_field  :price %>
+    </div>
 
-<%= render "form", book: @book %>
+  <div class="actions">
+    <%= f.submit "Update Book" %>
+  </div>
+<% end %>
 
 <br>
 

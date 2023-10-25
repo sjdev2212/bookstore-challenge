@@ -39,7 +39,13 @@
       <%= f.label :price %>
       <%= f.number_field  :price %>
     </div>
-    
+<div class="field">
+  <%= f.label :publisher_id %>
+  <%= f.collection_select :publisher_id, @publishers, :id, :name, prompt: "Select or Create a Publisher" %>
+</div>
+<p>publisher not listed?</p>
+
+<%= link_to "Create a new publisher", new_publisher_path %>
 
     <%= f.submit "Create Book" %>
   <% end %>

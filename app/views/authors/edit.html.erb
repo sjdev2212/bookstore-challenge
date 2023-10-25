@@ -1,0 +1,27 @@
+<%= form_for @author do |f| %>
+   <div class="field">
+      <%= f.label :first_name %>
+      <%= f.text_field :first_name %>
+    </div>
+      <div class="field">
+      <%= f.label :last_name %>
+      <%= f.text_field :last_name %>
+    </div>
+         <div class="field">
+      <%= f.label :date_of_birth %>
+   <%= f.date_field :date_of_birth %>
+    </div>
+         <div class="field">
+      <%= f.label :about %>
+      <%= f.text_area :about %>
+    </div>
+         <div class="field">
+      <%= f.label :nationality %>
+      <%= f.text_field  :nationality %>
+    </div>
+     
+
+  <div class="actions">
+    <%= f.submit "Update Author" %>
+  </div>
+<% end %>
