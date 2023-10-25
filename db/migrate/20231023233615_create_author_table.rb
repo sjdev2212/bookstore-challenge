@@ -7,8 +7,6 @@ class CreateAuthorTable < ActiveRecord::Migration[7.0]
       t.text   :about
       t.string :nationality
 
-      
-
       t.timestamps
     end
   end
