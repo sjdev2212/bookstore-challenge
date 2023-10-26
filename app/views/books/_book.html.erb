@@ -1,20 +1,8 @@
-
-
-<section class="books-cont">
-<div >
-
-    <h1><%= book.title %></h1>
-    <h3> Author: <%= book.author_name %> </h3>
-
- 
-  
-   
-    
-   
-
-
+<ul class="books-ul">
+<li class="books-li" >
+    <h3><%= book.title %></h3>
+    <p> Author: <%= book.author_name %> </p>
      <%=  link_to  "See Book" , book_path(book.id)%>
+    </li>
 
-  </div>
-</div>
-</section>
+</ul>

@@ -1,5 +1,9 @@
 <main class="main-container"> 
+<section class="books-titles">
 
+<h1>Welcome to the BooksStore</h1>
+<h3>Browse books or log in to add them to your whishlist</h3>
+</section>
 
 
 
@@ -13,9 +17,8 @@
 
 
 
-<h1>BooksStore</h1>
 
-<div id="books">
+<div class="books">
   <% @books.each do |book| %>
     <%= render book %>
   
