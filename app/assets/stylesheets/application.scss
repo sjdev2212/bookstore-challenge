@@ -353,11 +353,13 @@ body{
         font-weight: 700;
     }
 
-    .btn-cont{
-   
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-    }
+.update-price-cont{
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20vw;
+    margin-top: 10vw;
+
+}

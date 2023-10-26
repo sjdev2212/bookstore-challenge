@@ -56,6 +56,8 @@ gem 'cancancan'
 
 gem 'toastr-rails'
 
+gem 'sidekiq'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 

@@ -1,0 +1,2 @@
+module PriceUpdatesHelper
+end

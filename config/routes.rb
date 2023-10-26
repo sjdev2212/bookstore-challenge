@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  require 'sidekiq/web'
+mount Sidekiq::Web => '/sidekiq'
+
   devise_for :users
 
   resources :publishers do
@@ -16,6 +19,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root 'books#index'
+  resources :price_updates, only: [:new, :create]
 
   namespace :api do
     resources :books
