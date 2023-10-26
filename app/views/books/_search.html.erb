@@ -1,10 +1,17 @@
+<main class="search-books-container">
 <%= form_tag(books_path, method: :get) do %>
-  <div class="form-group">
+<section class="search-books-form">
+  <div class="">
     <%= text_field_tag :search, params[:search], class: 'form-control', placeholder: 'Search books...' %>
   </div>
-  <div class="form-group">
-    <%= select_tag :search_by, options_for_select(['Title', 'ISBN', 'Author', 'Publisher'], params[:search_by]), class: 'form-control' %>
+  <div class="">
+    <%= select_tag :search_by, options_for_select(['Title', 'ISBN', 'Author', 'Publisher'], params[:search_by]), class: 'search-select' %>
   </div>
-  <%= submit_tag 'Search', class: 'btn btn-primary' %>
+  <div>
+  
+  <%= submit_tag 'Search',style:"height: 2.9vw ; width: 10vw",class: 'search-btn' %>
+  </div>
+</section>
 <% end %>
 
+</main>

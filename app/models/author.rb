@@ -16,6 +16,6 @@ class Author < ApplicationRecord
   end
 
   def associated_books
-    number_of_books = books.count
+     books.count
   end
 end

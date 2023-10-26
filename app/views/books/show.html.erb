@@ -1,10 +1,26 @@
 <p style="color: green"><%= notice %></p>
+<p style="color: red"><%= alert %></p>
 
-<%= render @book %>
+<section class="show-book-container">
+
+<h1><%= @book.title %></h1>
+<h3> Author: <%= @book.author_name %>  Age:  <%= @book.author.author_age %> </h3>
+  <h5>Date of publication: <%= @book.date_of_publication %></h5>
+  <h5>Publisher: <%= @book.publisher.name if @book.publisher.present? %></h5>
+   <p class="card-text"><%= @book.review %></p>
+     <p>Price: $<%= @book.price %></p>
+
+
+
+
 
 <div>
+<% if can?  :manage, @books, @authors   %>
   <%= link_to "Edit this book", edit_book_path(@book) %> |
+  <%= button_to "Destroy this book", @book, method: :delete %>
+
+<%end%>
   <%= link_to "Back to books", books_path %>
 
-  <%= button_to "Destroy this book", @book, method: :delete %>
 </div>
+</section>

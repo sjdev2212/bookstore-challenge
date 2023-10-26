@@ -54,6 +54,8 @@ gem 'will_paginate', '~> 4.0'
 
 gem 'cancancan'
 
+gem 'toastr-rails'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 

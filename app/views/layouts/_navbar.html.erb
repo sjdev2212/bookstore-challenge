@@ -1,0 +1,21 @@
+<main class="navbar-container">
+<div >
+ <%= render partial:  "books/search" %>
+
+
+</div>
+<%if user_signed_in? %>
+<div>
+
+<%= button_to "Log out",  destroy_user_session_path, method: :delete, class:"logout-btn" %>
+</div>
+<%else%>
+<div class="nav-btns">
+<%= link_to "Log in", new_user_session_path, class:"login-btn" %>
+<%= link_to "Sign up", new_user_registration_path, class:"register-btn" %>
+<%= link_to  "Browse Books"  , root_path ,class:"browse-btn"    %>
+</div>
+
+<%end%>
+
+</main>

@@ -9,11 +9,13 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-  <p style="color: blue"><%= notice %></p>
-<p style="color: red"><%= alert %></p>
 
-  
+
   <body>
+<%= render partial:  '/layouts/navbar'%>
     <%= yield %>
+      <script>
+      toastr.success('Ya! it worked')
+    </script>
   </body>
 </html>

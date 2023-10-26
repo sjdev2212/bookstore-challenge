@@ -1,18 +1,294 @@
-@import "bootstrap";
-.books-cont{
-    background-color: rgb(16, 40, 92);
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/*navbar*/
+.navbar-container{
+    background-color: rgb(71, 80, 160);
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     align-content: center;
-    margin: 0 auto;
-    width: 100%;
-    height: 100%;
-    padding: 0;
-        
+    padding: 0.5vw;
+    margin: 0;
+    border-radius: 5px;
+    position: fixed;
+    width: 98%;
+    height: 5vw;
+    top: 0.2vw;
+    left : 0.4vw;
+   
 
 }
+
+.search-books-container{
+    background-color: transparent;
+    display: flex;
+    width: 20vw;
+    height: 2.5vw;
+    justify-content: space-around;
+}
+.search-books-form{
+    background-color: transparent;
+    display: flex;
+    width: 35vw;
+    height: 3vw;
+    justify-content: space-between;
+}
+.search-books-form input{
+    width: 15vw;
+    height: 1.8vw;
+    border-radius: 5px;
+    border: 1px solid rgb(27, 25, 25);
+    padding: 0.5vw;
+    font-size: 1.2vw;
+    font-weight: 700;
+
+}
+.search-select{
+    width: 10vw;
+    height: 2.9vw;
+    border-radius: 5px;
+    border: 1px solid rgb(27, 25, 25);
+    padding: 0.5vw;
+    font-size: 1.2vw;
+    font-weight: 700;
+    margin: 0 1.2vw;
+}
+.search-btn{
+    background-color: rgb(217, 221, 236);
+    margin-right: 1vw;
+    margin-left: 1vw;
+    font-size: 1.2vw;
+
+}
+.search-btn:hover{
+    background-color: rgb(34, 57, 105);
+    color: rgb(195, 198, 218);
+    font-weight: 700;
+    transition: 1s;
+}
+
+.logout-btn{
+    background-color: rgb(233, 233, 228);
+    margin-right: 1vw;
+    margin-left: 1vw;
+    font-size: 1.2vw;
+    font-weight: 700;
+    border-radius: 5px;
+    border: 1px solid rgb(27, 25, 25);
+    padding: 0.5vw;
+    transition: 1s;
+    height: 3vw;
+}
+.logout-btn:hover{
+    background-color: rgb(34, 57, 105);
+    color: rgb(195, 198, 218);
+    font-weight: 700;
+    transition: 1s;
+}
+.login-btn{
+    background-color: rgb(233, 233, 228);
+    margin-right: 1vw;
+    margin-left: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1vw;
+    font-weight: 700;
+    border-radius: 5px;
+    border: 1px solid rgb(27, 25, 25);
+    padding: 0.5vw;
+    transition: 1s;
+    height: 1.8vw;
+    width: 5vw;
+    text-decoration: none;
+    text-align: center;
+}
+.register-btn{
+    background-color: rgb(233, 233, 228);
+    margin-right: 1vw;
+    margin-left: 1vw;
+    line-height: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1vw;
+    font-weight: 700;
+    border-radius: 5px;
+    border: 1px solid rgb(27, 25, 25);
+    padding: 0.5vw;
+    transition: 1s;
+    height: 1.8vw;
+    width: 5vw;
+    text-decoration: none;
+    text-align: center;
+}
+.nav-btns{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    width: 20vw;
+    height: 2.5vw;
+}
+
+.browse-btn{
+    background-color: rgb(233, 233, 228);
+    margin-right: 1vw;
+    margin-left: 1vw;
+    display: flex;
+    line-height: 1vw;
+    justify-content: center;
+    align-items: center;
+    font-size: 1vw;
+    font-weight: 700;
+    border-radius: 5px;
+    border: 1px solid rgb(27, 25, 25);
+    padding: 0.5vw;
+    transition: 1s;
+    height: 1.8vw;
+    width: 5vw;
+    text-decoration: none;
+    text-align: center;
+
+
+}
+.browse-btn:hover{
+    background-color: rgb(34, 57, 105);
+    color: rgb(195, 198, 218);
+    font-weight: 700;
+    transition: 1s;
+}
+
+ 
+/*login-------------*/
+.login-container{
+    background-color: rgb(222, 230, 222);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 40%;
+    height : 80vh;
+    border: 1px solid black;
+    margin-top: 10vw;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 5px;;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);  
+}
+
+.login-container label {
+    font-size: 1.2vw;
+    font-weight: 700;
+
+
+}
+
+.login-title{
+    font-size: 3vw;
+    font-weight: 700;
+    margin: 1vw;
+}
+
+.login-container input {
+    width: 19vw;
+    height: 1.4vw;
+    margin: 0.5vw;
+    border-radius: 5px;
+    border: 1px solid rgb(27, 25, 25);
+    padding: 0.5vw;
+    font-size: 1.2vw;
+    font-weight: 700;
+} 
+
+ 
+.login-btn{
+   background-color: rgb(209, 209, 201);
+}
+.login-btn:hover{
+    background-color: rgb(34, 57, 105);
+    color: rgb(195, 198, 218);
+    font-weight: 700;
+    transition: 1s;
+}
+
+
+/* register-----------*/
+.register-container{
+    background-color: rgb(222, 230, 222);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 40%;
+    height : 80vh;
+    border: 1px solid black;
+    margin-top: 10vw;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 5px;;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);  
+}
+
+.register-container label {
+    font-size: 1.2vw;
+    font-weight: 700;
+
+
+}
+
+.register-title{
+    font-size: 3vw;
+    font-weight: 700;
+    margin: 1vw;
+}
+
+.register-container input {
+    width: 19vw;
+    height: 1.4vw;
+    margin: 0.5vw;
+    border-radius: 5px;
+    border: 1px solid rgb(27, 25, 25);
+    padding: 0.5vw;
+    font-size: 1.2vw;
+    font-weight: 700;
+} 
+.btn-cont{
+    background-color: rgb(230, 197, 197);
+    height: 5vw;
+}
+ 
+.register-btn{
+   background-color: rgb(209, 209, 201);
+}
+.register-btn:hover{
+    background-color: rgb(34, 57, 105);
+    color: rgb(195, 198, 218);
+    font-weight: 700;
+    transition: 1s;
+}
+
+
+.main-container{
+    background-color: rgb(222, 230, 222);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height : 100vh;
+    border: 1px solid black;
+    margin: 0.3vw;
+    border-radius: 5px;
+    
+}
+
+
 .pagination{
     background-color: rgb(71, 80, 160);
     display: flex;
