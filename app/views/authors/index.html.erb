@@ -1,26 +1,30 @@
 
-
+<main class="authors-list-container">
 <%if @authors.empty?%> 
     <p>There are no authors yet</p>
 <%else%>
-<div>
 
- <%= render partial:  "authors/search" %>
-</div>
-<% flash.each do |type, msg| %>
-  <div>
-    <%= msg %>
-  </div>
-<% end %>
+    <h1>Authors</h1>
 
+<section class="authors-list">
 <%  @authors.each do |author| %>
-<%= link_to  author.last_name , author_path(author)%>
+<div class="author-ind">
+<h5><%=  author.first_name + " " +  author.last_name%></h5>
    <p>Associated books: <%= author.associated_books %></p>
+ <%= link_to "See author", author_path(author)%>
+</div>
 <% end%>
 <%end%>
-
+</section>
+<div class="authors-links"> 
 <%= link_to "Add new author", new_author_path %>
- <%= link_to "Home", root_path %>
+ <%= link_to "Home", books_path %>
+</div>
+<div class="pagination-logged">
+<%= will_paginate @books %>
+</div>
+
+ <main>
 
 
 
