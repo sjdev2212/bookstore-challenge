@@ -1,0 +1,23 @@
+<main class="home-container">
+<div class="flash-messages-home">
+<% flash.each do |type, msg| %>
+  <div>
+    <%= msg %>
+    
+  </div>
+    <% flash.clear %>
+  </div>
+
+
+<% end %>
+</div>
+<h1>Welcome to the BooksStore</h1>
+<h3>Browse books or log in to add them to your whishlist</h3>
+<div class="books-home">
+<%= render partial: '/books/book_home' %>
+
+</div>
+<div class="pagination-home">
+<%= will_paginate @books %>
+</div>
+</main>

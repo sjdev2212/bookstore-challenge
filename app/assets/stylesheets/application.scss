@@ -1,6 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@500&family=Montserrat&family=Ubuntu:wght@400;500&display=swap');
+
+
 body{
     margin: 0;
     padding: 0;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 /*navbar*/
@@ -134,36 +138,268 @@ body{
     height: 2.5vw;
 }
 
-.browse-btn{
-    background-color: rgb(233, 233, 228);
-    margin-right: 1vw;
-    margin-left: 1vw;
+
+
+/* -------------home----------------*/
+.home-container{
+    background-color: rgb(222, 230, 222);
     display: flex;
-    line-height: 1vw;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    align-content: center;
+    width: 60%;
+    height : 80vh;
+
+    margin-top: 8vw;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 8px;;
+    box-shadow: 0 0 10px 0 rgba(8, 11, 216, 0.5);  
+}
+.home-container h1{
+    font-size: 3vw;
+    font-weight: 700;
+margin-top: 5vw;
+    color: rgb(15, 2, 73);
+}
+.home-container h3{
+    font-size: 1.6vw;
+    font-weight: 500;
+    margin: 1vw;
+    color: rgb(15, 2, 73);
+}
+.books-home{
+height: 30vw;
+ width: 60vw;
+ 
+}
+.book-home{
+    background-color: rgb(222, 230, 222);
+    height: 4vw;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    width: 60vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+
+}
+.book-home-logged{
+    background-color: rgb(222, 230, 222);
+    height: 5vw;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    width: 50vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+
+}
+
+.book-title{
+
+    height: 3vw;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.book-title-logged{
+    height: 5vw;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+   
+
+}
+.book-title-logged h3{
+    font-size: 1.1vw;
+    font-weight: 700;
+    line-height: 1.2vw;
+    margin: 0;
+    padding: 0;
+    width: 15vw;
+    text-align: center;
+    
+}
+.book-title-logged p{
     font-size: 1vw;
     font-weight: 700;
-    border-radius: 5px;
-    border: 1px solid rgb(27, 25, 25);
-    padding: 0.5vw;
-    transition: 1s;
-    height: 1.8vw;
-    width: 5vw;
-    text-decoration: none;
+    line-height: 1.2vw;
+    margin: 0.1vw;
+    padding: 0;
+    width: 10vw;
     text-align: center;
 
+  
+}
+
+
+.book-author{
+    height: 3vw;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 
 }
-.browse-btn:hover{
-    background-color: rgb(34, 57, 105);
-    color: rgb(195, 198, 218);
+.book-author-logged{
+    height: 5vw;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    
+
+
+}
+.book-author-logged h3{
+    font-size: 1.1vw;
+    font-weight: 700;
+    line-height: 1.2vw;
+    margin: 0;
+    padding: 0;
+    width: 15vw;
+    text-align: center;
+    
+}
+.book-author-logged p{
+    font-size: 1vw;
+    font-weight: 700;
+    line-height: 1.2vw;
+    margin: 0.1vw;
+    padding: 0;
+    width: 10vw;
+    text-align: center;
+
+  
+}
+.book-home h3{
+    font-size: 1.1vw;
+    font-weight: 700;
+    line-height: 1.2vw;
+    margin: 0;
+    padding: 0;
+    width: 20vw;
+    text-align: center;
+    
+}
+.book-home p{
+    font-size: 1vw;
+    font-weight: 700;
+    line-height: 1.2vw;
+    margin: 0.1vw;
+    padding: 0;
+    width: 10vw;
+    text-align: center;
+
+  
+}
+.book-home-logged a {
+    font-size: 1.1vw;
+    font-weight: 500;
+    line-height: 1.2vw;
+    margin: 0;
+    padding: 0;
+    width: 10vw;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(50, 31, 131);
+    cursor: pointer;
+
+
+}
+.book-home-logged a:hover{
+    color: rgb(107, 107, 112);
     font-weight: 700;
     transition: 1s;
+    scale: 1.2;
 }
+.book-home a{
+    font-size: 1.1vw;
+    font-weight: 500;
+    line-height: 1.2vw;
+    margin: 0;
+    padding: 0;
+    width: 10vw;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(50, 31, 131);
+    cursor: pointer;
 
- 
-/*login-------------*/
+}
+.book-home a:hover{
+    color: rgb(107, 107, 112);
+    font-weight: 700;
+    transition: 1s;
+    scale: 1.2;
+}
+.flash-messages-home{
+    width: 15vw;
+    display: flex;
+    color: rgb(46, 8, 180);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 1vw;
+    border-radius: 8px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    position: relative;
+    top: 0.5vw;
+    left: 40vw;
+}
+.flash-messages-logged{
+    width: 15vw;
+    display: flex;
+    color: rgb(46, 8, 180);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 1vw;
+    border-radius: 8px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    position: relative;
+    top: 0.5vw;
+    left: 26vw;
+
+
+}
+.pagination-home{
+
+    width: 60vw;
+
+}
+.pagination-logged{
+    
+        width: 50vw;
+    
+    
+}
+.books-list{
+    height: 25vw;
+    box-shadow: 0 0 10px 0 rgba(22, 13, 110, 0.5);
+    border-radius: 8px;
+}
+.logged-title{
+    font-size: 2.5vw;
+    font-weight: 700;
+    margin: 1vw;
+    color: rgb(15, 2, 73);
+    margin-bottom: 3.7vw;
+
+}
+/*---------------login-------------*/
 .login-container{
     background-color: rgb(222, 230, 222);
     display: flex;
@@ -277,57 +513,41 @@ body{
 
 .main-container{
     background-color: rgb(222, 230, 222);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+    display: grid;
+    grid-template-columns: 30% 70%;
     height : 100vh;
     border: 1px solid black;
     margin: 0.3vw;
     border-radius: 5px;
     
 }
-.books-titles{
-
+.section-right{
+    margin-top: 6vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid black;
-    margin-top: -10vw;       
-
-
+    
 }
-.books{
-    display: flex;
-    border: 1px solid black;
-    flex-direction: column;
- 
+.section-left{
+    margin-top: 7vw;
+    margin-left: 0.5vw;
+  
 }
+
 .books-ul{
-    display: flex;
- flex-direction: row;
-    justify-content: center;
-    align-items: center;
-   width: 70vw;
-    list-style: none;
-   height: 1.7vw;
+    border: 2px solid rgb(202, 15, 15);
+    height: 25vw;
+    width :50vw ;
+
 }
 .books-li{
     height: 3vw;
-    display: flex;
-    border-top: 1px solid black;
-    width: 60vw;
-    margin: 0;
-    padding: 0.5vw;
-    justify-content: space-between;
-    align-items: center;
-    width: 70vw;
-    background-color: aqua;
+  
 
 
 }
+
 .books-li h3 {
     font-size: 1.2vw;
     font-weight: 700;
@@ -343,6 +563,9 @@ body{
     background-color: rgb(71, 80, 160);
     display: flex;
     flex-wrap: wrap;
+
+    border-radius: 3px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
     justify-content: space-around;
     align-items: center;
     align-content: center  }
@@ -351,6 +574,52 @@ body{
         color: whitesmoke;
         font-size: 1.1vw;
         font-weight: 700;
+    }
+
+    .admin-panel{
+        height: 35vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;;
+        align-items: center;
+        border-radius: 8px;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+        width: 35vw;
+
+    }
+    .admin-panel h1{
+        font-size: 2vw;
+        font-weight: 700;
+        margin: 1vw;
+    }
+
+ .admin-panel button{
+    font-size: 1.1vw;
+    font-weight: 700;
+   margin :  1vw auto;
+    padding: 0.5vw;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 10vw;
+    text-align: center;
+    background-color: rgb(71, 80, 160);
+    color: whitesmoke;
+    cursor: pointer;
+    transition: 1s;
+    height: 3vw;
+    direction: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+ }
+ 
+    .admin-panel button:hover{
+        background-color: rgb(34, 57, 105);
+        color: rgb(195, 198, 218);
+        font-weight: 700;
+        transition: 1s;
     }
 
 .update-price-cont{
@@ -362,4 +631,94 @@ body{
     height: 20vw;
     margin-top: 10vw;
 
+}
+
+/* ----------show book-----------------*/
+.show-book-container{
+    background-color: rgb(222, 230, 222);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 40%;
+    height : 80vh;
+ 
+    margin-top: 7vw;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 5px;;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);  
+}
+.detail{
+   
+    height: 5vw;
+    width:25vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    border-bottom : 1px solid rgb(8, 7, 107);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+
+}
+.detail h3{
+    font-size: 1.2vw;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    width: 10vw;
+    text-align: center;
+
+    
+ 
+}
+.detail p{
+    font-size: 1vw;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    width: 10vw;
+    text-align: center;
+
+    
+ 
+}
+.detail a{
+    font-size: 1vw;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    width: 10vw;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(50, 31, 131);
+    cursor: pointer;
+}
+
+.detail a:hover{
+    color: rgb(107, 107, 112);
+    font-weight: 700;
+    transition: 1s;
+    scale: 1.2;
+}
+
+.delete-btn{
+    font-size: 1vw;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    width: 10vw;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(50, 31, 131);
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+.delete-btn:hover{
+    color: rgb(107, 107, 112);
+    font-weight: 700;
+    transition: 1s;
+    scale: 1.2;
 }

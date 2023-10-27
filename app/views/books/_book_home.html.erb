@@ -1,14 +1,15 @@
 
 <% @books.each do |book|%>
-<div class="book-home-logged" >
-<div class="book-title-logged">
+<div class="book-home" >
+<div class="book-title">
     <h3>Title: </h3>
     <p><%= book.title %></p>
     </div>
-    <div class="book-author-logged">
+    <div class="book-author">
     <h3> Author: </h3>
     <p><%= book.author_name %></p>
     </div>
      <%=  link_to  "See Book" , book_path(book.id)%>
     </div>
 <%end%>
+

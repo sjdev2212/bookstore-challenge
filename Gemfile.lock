@@ -265,13 +265,13 @@ DEPENDENCIES
   jbuilder
   pg (~> 1.1)
   puma (~> 5.0)
-  rails (~> 7.0.5, >= 7.0.5.1)
+  rails (~> 7.0.0)
   sassc-rails
   selenium-webdriver
   sidekiq
   sprockets-rails
   stimulus-rails
-  toastr-rails
+  toastr-rails (~> 1.0, >= 1.0.3)
   turbo-rails
   tzinfo-data
   web-console

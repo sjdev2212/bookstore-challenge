@@ -1,26 +1,48 @@
-<p style="color: green"><%= notice %></p>
-<p style="color: red"><%= alert %></p>
 
 <section class="show-book-container">
 
-<h1><%= @book.title %></h1>
-<h3> Author: <%= @book.author_name %>  Age:  <%= @book.author.author_age %> </h3>
-  <h5>Date of publication: <%= @book.date_of_publication %></h5>
-  <h5>Publisher: <%= @book.publisher.name if @book.publisher.present? %></h5>
-   <p class="card-text"><%= @book.review %></p>
-     <p>Price: $<%= @book.price %></p>
+<div class="detail detail-title ">
+<h3>Title:</h3>
+<p><%= @book.title %></p>
+</div>
+<div class="detail detail-author">
+<h3> Author:</h3>
+<p><%= @book.author_name %></p>
+<h3>Age: </h3>
+<p><%= @book.author.author_age %></p>
 
-
-
-
-
-<div>
+</div>
+<div class="detail detail-isbn">
+  <h3>ISBN: </h3>
+  <p><%= @book.isbn %></p>
+</div>
+<div class="detail detail-date">
+  <h3>Date of publication: </h3>
+  <p><%= @book.date_of_publication %></p>
+</div>
+<div class="detail detail-publisher">
+  <h3>Publisher: </h3>
+  <p><%= @book.publisher.name %></p>
+</div>
+<div class="detail detail-review">
+   <h3>Review:</h3>
+   <p> <%= @book.review %></p>
+</div>
+<div class="detail detail-price">
+     <h3>Price: $</h3>
+      <p><%= @book.price %></p>
+</div>
+<div class="detail detail-links">
 <% if can?  :manage, @books, @authors   %>
-  <%= link_to "Edit this book", edit_book_path(@book) %> |
-  <%= button_to "Destroy this book", @book, method: :delete %>
+  <%= link_to "Edit this book", edit_book_path(@book) %>
+  <%= button_to "Delete book", @book, method: :delete ,class: "delete-btn" %>
 
 <%end%>
+<% if user_signed_in?%>
   <%= link_to "Back to books", books_path %>
+  <% else%>
+  <%= link_to "Back to books", root_path %>
+  <%end%>
 
 </div>
 </section>

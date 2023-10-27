@@ -1,39 +1,43 @@
 <main class="main-container"> 
-<section class="books-titles">
-
-<h1>Welcome to the BooksStore</h1>
-<h3>Browse books or log in to add them to your whishlist</h3>
+<section class="section-left">
+<% if can?  :manage, @books, @authors   %>
+<div class="admin-panel"
+ <%= render partial: "admin/admin_panel" %>
+</div>
+ <%else%>
+ <%if user_signed_in?%>
+ <p>user  whishlist</p>
+  <%end%>
+ <%end%>
 </section>
 
 
-
-
-<% if can?  :manage, @books, @authors   %>
- <%= render partial: "admin/admin_panel" %>
-<%end%>
-<div class="flash-messages">
+<section class="section-right">
+<div class="flash-messages-logged">
 <% flash.each do |type, msg| %>
   <div>
     <%= msg %>
   </div>
 <% end %>
-
-
 </div>
+<% if @user == "admin"%>
+<h1 class="logged-title"> Welcome Admin! </h1>
+<%else%>
+<h1  class="logged-title"> Welcome to the Bookstore! </h1>
+<h3> Mark books and save them to your whishlist</h3>
+<%end%>
 
+<div class="books-list">
 
-
-
-
-
-<div class="books">
-  <% @books.each do |book| %>
-    <%= render book %>
+    <%= render partial:  '/books/book' %>
   
-  <% end %>
+
 </div>
-<div class"pagination">
+<div class="pagination-logged">
 <%= will_paginate @books %>
 </div>
+
+</section>
+
 </main>
 

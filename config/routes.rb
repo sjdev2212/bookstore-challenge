@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   require 'sidekiq/web'
-mount Sidekiq::Web => '/sidekiq'
+  mount Sidekiq::Web => '/sidekiq'
 
   devise_for :users
 
@@ -18,7 +18,8 @@ mount Sidekiq::Web => '/sidekiq'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
-  root 'books#index'
+
+  root 'books#home'
   resources :price_updates, only: [:new, :create]
 
   namespace :api do

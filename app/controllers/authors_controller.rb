@@ -22,7 +22,7 @@ class AuthorsController < ApplicationController
   def create
     @author = Author.new(author_params)
     if @author.save
-      redirect_to root_path
+      redirect_to books_path
     else
       render :new
     end
@@ -35,7 +35,7 @@ class AuthorsController < ApplicationController
   def update
     author = Author.find(params[:id])
     if author.update(author_params)
-      redirect_to root_path
+      redirect_to books_path
     else
       render :edit
     end
@@ -44,7 +44,7 @@ class AuthorsController < ApplicationController
   def destroy
     author = Author.find(params[:id])
     author.destroy
-    redirect_to root_path
+    redirect_to books_path
   end
 
   private

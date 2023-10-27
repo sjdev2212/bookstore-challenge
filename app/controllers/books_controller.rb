@@ -1,12 +1,15 @@
 class BooksController < ApplicationController
-  load_and_authorize_resource
+  load_and_authorize_resource except: [:home, :index, :show]
 
-  # GET /books or /books.json
+def home 
+  @books = Book.paginate(page: params[:page], per_page: 5)
+end
 
   def index
+    @user = current_user.role
     @search = params[:search]
     @search_by = params[:search_by]
-    @books = Book.paginate(page: params[:page], per_page: 3)
+    @books = Book.paginate(page: params[:page], per_page: 5)
 
     if @search.present?
       case @search_by
@@ -45,7 +48,7 @@ class BooksController < ApplicationController
     end
 
     if @book.save
-      redirect_to root_path, notice: 'Book was successfully created.'
+      redirect_to books_path, notice: 'Book was successfully created.'
     else
       render :new
     end
@@ -57,7 +60,7 @@ class BooksController < ApplicationController
   def update
     if @book.update(book_params)
       # Book updated successfully
-      redirect_to @book, notice: 'Book was successfully updated.'
+      redirect_to books_path, notice: 'Book was successfully updated.'
     else
       render :edit
     end

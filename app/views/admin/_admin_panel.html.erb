@@ -1,15 +1,10 @@
+<div class="panel-container">
 <h1>Admin panel</h1>
-<div>
+<%= button_to 'Add Author', new_author_path , method: :get %>
 
-
-
-<%= link_to "See Available books" , books_path%>
-<%= link_to "Add Author", new_author_path %>
-  <%= link_to "See Authors", authors_path %>
-  <%= link_to "See Publishers", publishers_path %>
-<%= link_to "add Publisher" ,  new_publisher_path%>
-<%= link_to "Update Price" ,  new_price_update_path %>
-
-
+  <%= button_to "See Authors", authors_path , method: :get  %>
+  <%= button_to "See Publishers", publishers_path, method: :get  %>
+<%= button_to "add Publisher" ,  new_publisher_path , method: :get %>
+<%= button_to "Update Price" ,  new_price_update_path , method: :get  %>
 
 </div>
