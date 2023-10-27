@@ -1,5 +1,6 @@
 class Author < ApplicationRecord
-  has_many :books
+  has_many :books, dependent: :nullify
+
   belongs_to :publisher, optional: true
   validates :first_name, presence: true
   validates :last_name, presence: true
