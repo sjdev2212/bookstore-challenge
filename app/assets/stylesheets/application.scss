@@ -623,15 +623,65 @@ height: 30vw;
     }
 
 .update-price-cont{
-    border: 2px solid black;
+    background-color: rgb(222, 230, 222);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 20vw;
-    margin-top: 10vw;
+    align-content: center;
+    height : 100vh;
+    margin-top: 1vw;
+   
 
 }
+.update-price-cont form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    width: 60vw;
+    border-radius: 5px;;
+    height: 25vw;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);  
+    padding-top: 2vw;
+
+}
+.update-price-cont label{
+    font-size: 1.2vw;
+    font-weight: 700;
+    color: rgb(7, 13, 61);
+    justify-self: center;
+    width: 20vw;
+    text-align: center;
+         
+
+}
+.update-price-cont input {
+    width: 18vw;
+    height: 1.2vw;
+
+    border-radius: 5px;
+    border: 1px solid rgb(27, 25, 25);
+    padding: 0.5vw;
+    font-size: 1.2vw;
+    font-weight: 700;
+   
+  
+}
+.update-price-cont select{
+    width: 19vw;
+    height: 3.2vw;
+    border-radius: 5px;
+    border: 1px solid rgb(27, 25, 25);
+    padding: 0.5vw;
+    font-size: 1.2vw;
+    font-weight: 700;
+    padding-left: 3vw;
+
+  
+    
+}
+
 
 /* ----------show book-----------------*/
 .show-book-container{
@@ -1430,4 +1480,122 @@ top:5vw;
     position: relative;
     top:20.5vw;
 
+}
+
+/* add publisher */
+.add-publisher-container{
+    background-color: rgb(222, 230, 222);
+ display: flex;
+ flex-direction: column;
+    height : 80vh;
+    width: 70%;
+    margin-top: 7vw;
+    border-radius: 5px;
+    align-items: center;
+    align-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+.add-publisher-container h2{
+    font-size: 3vw;
+    font-weight: 700;
+    margin-top: 2vw;
+    color: rgb(7, 13, 61);
+
+}
+.add-publisher-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    width: 60vw;
+    border-radius: 5px;;
+    height: 80vw;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);  
+
+}
+.add-publisher-container label{
+    font-size: 1.2vw;
+    font-weight: 700;
+    color: rgb(7, 13, 61);
+    justify-self: center;
+    width: 20vw;
+    height: 1.2vw;
+text-align: center;
+}
+.add-publisher-container input {
+    width: 19vw;
+    height: 1.2vw;
+    margin: 0.5vw;
+    border-radius: 5px;
+    border: 1px solid rgb(27, 25, 25);
+    padding: 0.5vw;
+    font-size: 1.2vw;
+    font-weight: 700;
+}
+
+.add-pub-btn{
+    font-size: 1vw;
+    font-weight: 700;
+   margin :  1vw auto;
+    padding: 0.5vw;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    background-color: rgb(71, 80, 160);
+    color: whitesmoke;
+    cursor: pointer;
+    transition: 1s;
+    direction: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+   position: relative;
+}
+.add-pub-btn:hover{
+    background-color: rgb(34, 57, 105);
+    color: rgb(195, 198, 218);
+    font-weight: 700;
+    transition: 1s;
+}
+.addpub-back-link{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.addpub-back-link a{
+    text-decoration: none;
+    color: rgb(50, 31, 131);
+    cursor: pointer;
+    padding-right: 3vw ;
+    margin-top: 0.4vw;
+}
+.addpub-back-link a:hover{
+    color: rgb(107, 107, 112);
+    font-weight: 700;
+    transition: 1s;
+    scale: 1.1;
+    
+}
+
+.update-btn{
+ 
+    font-weight: 700;
+   margin :  1vw auto;
+    padding: 0.5vw;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+    background-color: rgb(71, 80, 160);
+    color: whitesmoke;
+    cursor: pointer;
+    transition: 1s;
+    direction: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+position: relative;
+right: 1.4vw;
 }

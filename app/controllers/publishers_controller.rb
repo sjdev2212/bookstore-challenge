@@ -45,7 +45,7 @@ class PublishersController < ApplicationController
   def destroy
     @publisher = Publisher.find(params[:id])
     @publisher.destroy
-    redirect_to books_path , notice: 'Publisher was successfully destroyed.'
+    redirect_to books_path , notice: 'Publisher was successfully deleted.'
   end
 
   private

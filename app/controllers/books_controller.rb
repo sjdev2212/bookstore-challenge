@@ -71,7 +71,7 @@ end
     @book.destroy
 
     # Book deleted successfully
-    redirect_to books_url, notice: 'Book was successfully destroyed.'
+    redirect_to books_url, notice: 'Book was successfully deleted.'
   end
 
   private
