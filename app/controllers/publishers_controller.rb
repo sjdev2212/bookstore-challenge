@@ -36,7 +36,7 @@ class PublishersController < ApplicationController
     @publisher = Publisher.find(params[:id])
 
     if @publisher.update(publisher_params)
-      redirect_to @publisher, notice: 'Publisher was successfully updated.'
+      redirect_to books_path, notice: 'Publisher was successfully updated.'
     else
       render :edit
     end
@@ -45,7 +45,7 @@ class PublishersController < ApplicationController
   def destroy
     @publisher = Publisher.find(params[:id])
     @publisher.destroy
-    redirect_to publishers_path
+    redirect_to books_path , notice: 'Publisher was successfully destroyed.'
   end
 
   private
