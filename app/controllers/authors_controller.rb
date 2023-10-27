@@ -1,7 +1,7 @@
 class AuthorsController < ApplicationController
 
   def index
-    @authors = Author.includes(:books).paginate(page: params[:page], per_page: 10)
+    @authors = Author.includes(:books).paginate(page: params[:page], per_page: 7)
     @search = params[:search]
 
     if @search.present?
