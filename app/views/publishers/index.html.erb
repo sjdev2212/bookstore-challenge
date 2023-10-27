@@ -1,29 +1,40 @@
-<div>
-    <h1>Publishers</h1>
+<main class="publishers-container ">
+    <h1 class="publishers-title">Publishers</h1>
     <% if @publishers.empty? %>
-     <h2>There are no publishers yet</h2>
+     <h2 class="no-publishers">There are no publishers yet</h2>
+     <%= link_to "Add a Publisher" , new_publisher_path ,class: "no-publisher-link" %>
       
        <%else%>
-       div>
+    <div class="search">
 
  <%= render partial:  "publishers/search" %>
 </div>
   <% @publishers.each do |publisher| %>
+    <section class="publishers-list">
     <div class="publisher">
+    <sectio class="publisher-up">
+      <h2>Publisher's name:</h2>
       <h2><%= publisher.name %></h2>
         <p>Associated books: <%= publisher.associated_books %></p>
-      <%= link_to "update publisher" , edit_publisher_path(publisher.id) %>
-        <%= button_to "Delete publisher ", publisher, method: :delete %>
+        </sectio>
+        <section class="publisher-down">
+          <%= link_to "update publisher" , edit_publisher_path(publisher.id),class:"pub-links" %>
+        <%= button_to "Delete publisher ", publisher, method: :delete ,class:"pub-links btn-pub"%>
+        </section>
+        </div>
+        
+    
         
     
     
-    </div>
+    </section>
 
   
   <% end %>
  
    
+  <%= link_to "Back", books_path %>
 <% end %>
 
-</div>
-  <%= link_to "Home", root_path %>
+  <%= link_to "Back", books_path, class:"back-pub" %>
+  </main>
