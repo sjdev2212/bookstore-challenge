@@ -1,4 +1,5 @@
 class AuthorsController < ApplicationController
+
   def index
     @authors = Author.includes(:books).paginate(page: params[:page], per_page: 10)
     @search = params[:search]
@@ -22,7 +23,7 @@ class AuthorsController < ApplicationController
   def create
     @author = Author.new(author_params)
     if @author.save
-      redirect_to books_path
+      redirect_to books_path, notice: 'Author was successfully created.'
     else
       render :new
     end
@@ -35,7 +36,7 @@ class AuthorsController < ApplicationController
   def update
     author = Author.find(params[:id])
     if author.update(author_params)
-      redirect_to books_path
+      redirect_to books_path, notice: 'Author was successfully updated.'
     else
       render :edit
     end
@@ -44,7 +45,7 @@ class AuthorsController < ApplicationController
   def destroy
     author = Author.find(params[:id])
     author.destroy
-    redirect_to books_path
+    redirect_to books_path, notice: 'Author was successfully deleted.'
   end
 
   private
