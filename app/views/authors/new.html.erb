@@ -1,4 +1,6 @@
-<h1>Add Author</h1>
+
+<main class="authors-container">
+
 
 
 <% if @author.present? %>
@@ -15,6 +17,7 @@
       </div>
     <% end %>
 
+<h1>Add Author</h1>
     <div class="field">
       <%= f.label :first_name %>
       <%= f.text_field :first_name %>
@@ -23,7 +26,7 @@
       <%= f.label :last_name %>
       <%= f.text_field :last_name %>
     </div>
-         <div class="field">
+         <div class="field-date">
       <%= f.label :date_of_birth %>
    <%= f.date_field :date_of_birth %>
     </div>
@@ -31,19 +34,23 @@
       <%= f.label :about %>
       <%= f.text_area :about %>
     </div>
-         <div class="field">
+         <div class="field-about">
       <%= f.label :nationality %>
       <%= f.text_field  :nationality %>
     </div>
      
     
-
-    <%= f.submit "Add Author" %>
+<div class="field-btn">
+    <%= f.submit "Add Author",style: "height: 3.8vw", class: "add-author" %>
+    </div>
+    <div>
+  <%= link_to "Go Back", books_path, class:"link-back" %>
+</div>
   <% end %>
 <% else %>
   <p>aca esta el error</p>
 <% end %>
 
-<div>
-  <%= link_to "Home", root_path %>
-</div>
+
+</main>
+
