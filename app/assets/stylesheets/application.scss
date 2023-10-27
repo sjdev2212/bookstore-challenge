@@ -738,12 +738,9 @@ height: 30vw;
 .authors-container form {
     display: flex;
     flex-direction: column;
-
     align-items: center;
     align-content: center;
- 
     width: 60vw;
-  
     border-radius: 5px;;
     height: 80vw;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);  
@@ -950,6 +947,108 @@ justify-content: space-around;
     cursor: pointer;
 }
 .authors-links a:hover{
+    color: rgb(107, 107, 112);
+    font-weight: 700;
+    transition: 1s;
+    scale: 1.2;
+}
+.no-authors{
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2vw;
+}
+
+/* author show */
+.author-detail-cont{
+    background-color: rgb(222, 230, 222);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height : 80vh;
+    width: 60vw;
+    margin-top: 7vw;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 5px;;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);  
+
+}
+
+.show-author-detail{
+    height: 6vw;
+    width: 40vw;
+box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.8);; 
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+}
+.show-author-detail h5{
+    font-size: 1.2vw;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    width: 10vw;
+    text-align: center;
+
+    
+ 
+}
+.show-author-detail p{
+    font-size: 1vw;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    width: 10vw;
+    text-align: center;
+
+    
+ 
+}
+
+.author-show-links{
+    width: 40vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.author-show-links a{
+    font-size: 1vw;
+    font-weight: 700;
+    margin: 0.4vw 0;
+    padding: 0;
+    width: 10vw;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(50, 31, 131);
+    cursor: pointer;
+}
+.author-show-links a:hover{
+    color: rgb(107, 107, 112);
+    font-weight: 700;
+    transition: 1s;
+    scale: 1.2;
+}
+.delete-author-btn{
+    font-size: 1vw;
+    font-weight: 700;
+    margin: 0.4vw 0;
+    padding: 0;
+    width: 10vw;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(50, 31, 131);
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+
+}
+.delete-author-btn:hover{
     color: rgb(107, 107, 112);
     font-weight: 700;
     transition: 1s;
