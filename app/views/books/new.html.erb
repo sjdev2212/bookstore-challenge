@@ -1,5 +1,10 @@
-<h1>New book</h1>
+<main class="add-book-container">
 
+
+
+
+
+    <section class="section-form-right">
 
 <% if @author.present? %>
   <%= form_for [@author, @book] do |f| %>
@@ -28,9 +33,11 @@
    <%= f.text_field :author_name, value: @full_name, readonly: true %>
     </div>
          <div class="field">
-      <%= f.label :review %>
+      <%= f.label :review, style: "margin-bottom: 0.3vw" %>
       <%= f.text_area :review %>
     </div>
+    </section>
+    <section class="section-form-left">
          <div class="field">
       <%= f.label :date_of_publication %>
       <%= f.date_field  :date_of_publication %>
@@ -40,19 +47,19 @@
       <%= f.number_field  :price %>
     </div>
 <div class="field">
-  <%= f.label :publisher_id %>
-  <%= f.collection_select :publisher_id, @publishers, :id, :name, prompt: "Select or Create a Publisher" %>
+  <%= f.label :publisher_id  , style: "margin-bottom: 0.2vw"%>
+  <%= f.collection_select :publisher_id, @publishers, :id, :name, prompt: "Select or Create a Publisher" , style: "width: 10vw" %>
 </div>
 <p>publisher not listed?</p>
 
 <%= link_to "Create a new publisher", new_publisher_path %>
 
-    <%= f.submit "Create Book" %>
+    <%= f.submit "Create Book", style: "width: 14vw; height: 4.5vw" ,class:"add-book-btn"%>
   <% end %>
+  </section>
 <% else %>
   <p>aca esta el error</p>
 <% end %>
 
-<div>
-  <%= link_to "Back to books", root_path %>
-</div>
+<%= link_to "Back", authors_path , class:"add-book-link"%>
+</main>

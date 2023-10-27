@@ -1,3 +1,5 @@
+<main class="edit-author-container">
+<h3>Edit Author</h3>
 <%= form_for @author do |f| %>
    <div class="field">
       <%= f.label :first_name %>
@@ -21,10 +23,12 @@
     </div>
      
 
-  <div class="actions">
-    <%= f.submit "Update Author" %>
+  <div class="edit-author-btn">
+    <%= f.submit "Update Author", style: "height: 3.8vw ; width: 10vw ; font-size: 1vw", class: "edit-author" %>
   </div>
 <% end %>
 <div>
-  <%= link_to "Home", root_path %>
+  <%= link_to "Back", authors_path %>
 </div>
+</main>
+
