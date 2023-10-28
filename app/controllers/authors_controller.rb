@@ -11,10 +11,15 @@ class AuthorsController < ApplicationController
         .paginate(page: params[:page], per_page: 10)
     end
   end
+  def about_modal
+    @author = Author.find(params[:id])
+    render 'remote_modal', layout: true
+  end
 
   def show
     @author = Author.find(params[:id])
   end
+
 
   def new
     @author = Author.new

@@ -30,6 +30,12 @@ end
   def show
     @book = Book.find(params[:id])
   end
+  
+  def review_modal
+    @book = Book.find(params[:id])
+    render 'book_detail', layout: true
+  end
+
 
   def new
     @author = Author.find(params[:author_id])
@@ -53,7 +59,7 @@ end
       render :new
     end
   end
-
+ 
   def edit
   end
 

@@ -1,0 +1,18 @@
+
+
+<main class="author-about-container">
+   <h1>
+   <%= @author.first_name + " " + @author.last_name%>
+
+   </h1>
+    <div class="author-detaabout">
+       <p>
+         <%= @author.about %>
+         </p>
+
+
+</main>
+<div class="addpub-back-link">
+<%= link_to 'Back', author_path(@author.id) %>
+</div>
+

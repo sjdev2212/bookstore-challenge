@@ -26,7 +26,8 @@
 </div>
 <div class="detail detail-review">
    <h3>Review:</h3>
-   <p> <%= @book.review %></p>
+  <%= @book.review.to_s.split.take(6).join(" ") %>
+  <%= link_to "see more",  review_modal_book_path(@book.id) %>
 </div>
 <div class="detail detail-price">
      <h3>Price: $</h3>

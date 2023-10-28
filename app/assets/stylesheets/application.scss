@@ -111,10 +111,9 @@ body{
     text-align: center;
 }
 .register-btn{
-    background-color: rgb(233, 233, 228);
+    background-color: rgb(14, 32, 90);
     margin-right: 1vw;
     margin-left: 1vw;
-    line-height: 1vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -128,6 +127,7 @@ body{
     width: 5vw;
     text-decoration: none;
     text-align: center;
+  
 }
 .nav-btns{
     display: flex;
@@ -455,34 +455,57 @@ height: 30vw;
 
 /* register-----------*/
 .register-container{
-    background-color: rgb(222, 230, 222);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+align-items: center;
     align-content: center;
     width: 40%;
     height : 80vh;
-    border: 1px solid black;
     margin-top: 10vw;
     margin-right: auto;
     margin-left: auto;
-    border-radius: 5px;;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);  
+  
 }
-
-.register-container label {
+.register-container form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    width: 60vw;
+    border-radius: 5px;;
+    height: 30vw;
+    width: 40vw;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);  
+    padding-top: 2vw;
+}
+.role-label{
     font-size: 1.2vw;
     font-weight: 700;
-
-
+    color: rgb(7, 13, 61);
+    justify-self: center;
+    width: 20vw;
+    text-align: center;
 }
-
-.register-title{
-    font-size: 3vw;
+.email-label{
+    font-size: 1.2vw;
     font-weight: 700;
-    margin: 1vw;
+    color: rgb(7, 13, 61);
+    justify-self: center;
+    text-align: center;
+    position: relative;
+    left:8vw;
 }
+.password-label{
+    font-size: 1.2vw;
+    font-weight: 700;
+    color: rgb(7, 13, 61);
+    justify-self: center;
+    text-align: center;
+    position: relative;
+    left:5vw;
+}
+
+
 
 .register-container input {
     width: 19vw;
@@ -493,7 +516,14 @@ height: 30vw;
     padding: 0.5vw;
     font-size: 1.2vw;
     font-weight: 700;
-} 
+}
+
+.register-title{
+    font-size: 3vw;
+    font-weight: 700;
+    margin: 1vw;
+}
+
 .btn-cont{
     background-color: rgb(230, 197, 197);
     height: 5vw;
@@ -1192,6 +1222,35 @@ text-align: center;
     scale: 1.2;
     
 }
+
+.author-about-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+
+    width: 40vw;
+    border-radius: 5px;;
+    height: 35vw;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);  
+    margin-top: 7vw;
+    margin-left: auto;
+    margin-right: auto;
+}
+.author-about-container h1 {
+    font-size: 2vw;
+    font-weight: 700;
+    margin: 1vw;
+    color: rgb(7, 13, 61);
+}
+.author-about-container p{
+    font-size: 1.2vw;
+    font-weight: 700;
+    margin: 1vw;
+    color: rgb(7, 13, 61);
+    text-align: center;
+}
+
 
 /* ----------add book-----------------*/
 .add-book-container{

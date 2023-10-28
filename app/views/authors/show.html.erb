@@ -18,7 +18,9 @@ Date of Birth:
 About this author:
 </h5>
 <p>
-<%= @author.about %>
+  <%= @author.about.to_s.split.take(6).join(" ") %>
+  <%= link_to "see more", about_modal_author_path(@author.id) %>
+
 </p>
 </div>
 <div class="show-author-detail">
@@ -33,11 +35,11 @@ Country of origin:
 
 
 
-
 <div class="author-show-links">
 <%= link_to  "Add book for this author", new_author_book_path(@author)%>
 <%= link_to  "Update author", edit_author_path(@author.id)%>
 <%= button_to "Delete author ",  @author, method: :delete, class:"delete-author-btn" %>
+
 
   <%= link_to "Back", authors_path %>
 </div>
