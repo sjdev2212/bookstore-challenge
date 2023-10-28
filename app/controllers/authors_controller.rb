@@ -1,5 +1,4 @@
 class AuthorsController < ApplicationController
-
   def index
     @authors = Author.includes(:books).paginate(page: params[:page], per_page: 7)
     @search = params[:search]
@@ -11,6 +10,7 @@ class AuthorsController < ApplicationController
         .paginate(page: params[:page], per_page: 10)
     end
   end
+
   def about_modal
     @author = Author.find(params[:id])
     render 'remote_modal', layout: true
@@ -19,7 +19,6 @@ class AuthorsController < ApplicationController
   def show
     @author = Author.find(params[:id])
   end
-
 
   def new
     @author = Author.new

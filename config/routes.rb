@@ -9,7 +9,6 @@ Rails.application.routes.draw do
   end
 
   resources :authors do
-   
     resources :books
   end
 
@@ -19,14 +18,15 @@ Rails.application.routes.draw do
     end
   end
 
-resources :books do
-  member do
-    get 'review_modal', to: 'books#review_modal'
+  resources :books do
+    member do
+      get 'review_modal', to: 'books#review_modal'
+    end
   end
-
-end
   resources :books
   resources :authors
+
+
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

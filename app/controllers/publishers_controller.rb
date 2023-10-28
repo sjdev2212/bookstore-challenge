@@ -1,6 +1,6 @@
 class PublishersController < ApplicationController
   def index
-    @publishers = Publisher.all
+    @publishers = Publisher.paginate(page: params[:page], per_page: 4)
     @search = params[:search]
 
     if @search.present?
@@ -8,6 +8,10 @@ class PublishersController < ApplicationController
         Publisher
         .where('publishers.name ILIKE ?', "%#{@search}%")
         .paginate(page: params[:page], per_page: 10)
+    end
+    if @publishers.empty?
+      # No results found for the search
+      flash.now[:notice] = "No publishers match your search."
     end
   end
 
@@ -45,7 +49,7 @@ class PublishersController < ApplicationController
   def destroy
     @publisher = Publisher.find(params[:id])
     @publisher.destroy
-    redirect_to books_path , notice: 'Publisher was successfully deleted.'
+    redirect_to books_path, notice: 'Publisher was successfully deleted.'
   end
 
   private

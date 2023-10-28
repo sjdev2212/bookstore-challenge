@@ -1,9 +1,13 @@
 
 <main class="authors-list-container">
-<%if @authors.empty?%> 
+<%if @authors.empty? && @search.blank?%> 
 <div class="no-authors">
     <p>There are no authors yet</p>
 </div>
+ <% elsif @authors.empty? %>
+    <div>
+      <p>No results found for: <%= params[:search] %></p>
+    </div>
 <%else%>
     <div class="search">
 

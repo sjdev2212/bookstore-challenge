@@ -1460,7 +1460,7 @@ top:5vw;
     transition: 1s;
 }
 .publishers-list{
-    background-color: rgb(222, 230, 222);
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1478,6 +1478,7 @@ top:5vw;
   display: grid;
     grid-template-rows: 50% 50%;
     box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.8);;
+  
 }
 .publisher-up{
 
@@ -1485,6 +1486,7 @@ top:5vw;
     flex-direction: row;
     justify-content: space-around;
     padding: 0.5vw;
+   
 }
 .publisher-down{
     background-color: rgb(222, 230, 222);

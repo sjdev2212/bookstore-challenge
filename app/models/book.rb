@@ -11,6 +11,8 @@ class Book < ApplicationRecord
   validates :review, length: { maximum: 1000 }
   validate :date_of_publication_not_in_future
 
+
+
   def date_of_publication_not_in_future
     if date_of_publication.present? && date_of_publication > Date.today
       errors.add(:date_of_publication, "can't be in the future")

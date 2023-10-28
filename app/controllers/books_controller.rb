@@ -1,9 +1,9 @@
 class BooksController < ApplicationController
   load_and_authorize_resource except: [:home, :index, :show]
 
-def home 
-  @books = Book.paginate(page: params[:page], per_page: 5)
-end
+  def home
+    @books = Book.paginate(page: params[:page], per_page: 5)
+  end
 
   def index
     @user = current_user.role
@@ -30,12 +30,11 @@ end
   def show
     @book = Book.find(params[:id])
   end
-  
+
   def review_modal
     @book = Book.find(params[:id])
     render 'book_detail', layout: true
   end
-
 
   def new
     @author = Author.find(params[:author_id])
@@ -59,7 +58,7 @@ end
       render :new
     end
   end
- 
+
   def edit
   end
 
@@ -79,6 +78,10 @@ end
     # Book deleted successfully
     redirect_to books_url, notice: 'Book was successfully deleted.'
   end
+
+
+  
+
 
   private
 

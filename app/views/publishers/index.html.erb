@@ -1,22 +1,25 @@
-<main class="publishers-container ">
-    <h1 class="publishers-title">Publishers</h1>
-    <% if @publishers.empty? %>
-     <h2 class="no-publishers">There are no publishers yet</h2>
-     <%= link_to "Add a Publisher" , new_publisher_path ,class: "no-publisher-link" %>
-      
-       <%else%>
+<main class="publishers-container">
+  <h1 class="publishers-title">Publishers</h1>
+  <% if @publishers.empty? && @search.blank? %>
+    <h2 class="no-publishers">There are no publishers yet</h2>
+    <%= link_to "Add a Publisher", new_publisher_path, class: "no-publisher-link" %>
+  <% elsif @publishers.empty? %>
+    <div>
+      <p>No results found for: <%= params[:search] %></p>
+    </div>
+  <% else %>
     <div class="search">
-
- <%= render partial:  "publishers/search" %>
-</div>
-  <% @publishers.each do |publisher| %>
+      <%= render partial: "publishers/search" %>
+    </div>
     <section class="publishers-list">
+      <% @publishers.each do |publisher| %>
+    
     <div class="publisher">
-    <sectio class="publisher-up">
+    <section class="publisher-up">
       <h2>Publisher's name:</h2>
       <h2><%= publisher.name %></h2>
         <p>Associated books: <%= publisher.associated_books %></p>
-        </sectio>
+        </section>
         <section class="publisher-down">
           <%= link_to "update publisher" , edit_publisher_path(publisher.id),class:"pub-links" %>
         <%= button_to "Delete publisher ", publisher, method: :delete ,class:"pub-links btn-pub"%>
@@ -27,15 +30,28 @@
         
     
     
+ 
+
+      <% end %>
     </section>
-
-  
   <% end %>
- 
-   
- 
-<% end %>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="pagination-logged">
+<%= will_paginate @books %>
+</div>
 
   </main>
   <div class="addpub-back-link">
