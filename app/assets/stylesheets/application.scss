@@ -840,11 +840,6 @@ align-items: center;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);  
 
 }
-
-
-
-
-
 .authors-container h1{
     font-size: 3vw;
     font-weight: 700;
@@ -910,8 +905,6 @@ text-align: center;
 }
 .field-btn{
     display: flex;
-    
-  
     width: 30vw;
     height: 5vw;
     padding-left: 8vw;
@@ -964,9 +957,6 @@ text-align: center;
     margin-right: auto;
     margin-left: auto;
  
-
-
-
 }
 .authors-list{
     background-color: rgb(222, 230, 222);
@@ -983,10 +973,9 @@ text-align: center;
 .author-ind{
     display: flex;
 flex-direction: row;
-justify-content: space-around;
+    justify-content: space-around;
     height: 3.9vw;
     align-items: center;
-
     width: 50vw;
     box-shadow: 0 0 10px 0 rgba(7, 18, 121, 0.5);
 }
@@ -1074,13 +1063,13 @@ justify-content: space-around;
 }
 
 .show-author-detail{
-    height: 6vw;
-    width: 40vw;
-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.8);; 
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    align-content: center;
+  height: 6vw;
+  width: 40vw;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.8);; 
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
 }
 .show-author-detail h5{
     font-size: 1.2vw;
@@ -1089,9 +1078,6 @@ box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.8);;
     padding: 0;
     width: 10vw;
     text-align: center;
-
-    
- 
 }
 .show-author-detail p{
     font-size: 1vw;
@@ -1100,9 +1086,6 @@ box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.8);;
     padding: 0;
     width: 10vw;
     text-align: center;
-
-    
- 
 }
 
 .author-show-links{
@@ -1151,16 +1134,15 @@ box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.8);;
 /* edit author */
 .edit-author-container{
   background-color: rgb(222, 230, 222);
- display: flex;
- flex-direction: column;
-    height : 80vh;
-    width: 70%;
-    margin-top: 7vw;
- 
-    align-items: center;
-    align-content: center;
-    margin-right: auto;
-    margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  height : 80vh;
+  width: 70%;
+  margin-top: 7vw;
+  align-items: center;
+  align-content: center;
+  margin-right: auto;
+  margin-left: auto;
 }
 .edit-author-container form {
     display: flex;
@@ -1234,15 +1216,13 @@ text-align: center;
     font-weight: 700;
     transition: 1s;
     scale: 1.2;
-    
-}
+    }
 
 .author-about-container{
     display: flex;
     flex-direction: column;
     align-items: center;
     align-content: center;
-
     width: 40vw;
     border-radius: 5px;;
     height: 35vw;
@@ -1283,8 +1263,6 @@ text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    
 }
 .section-form-right label{
     font-size: 1.2vw;
@@ -1371,9 +1349,9 @@ text-align: center;
     justify-content: center;
     align-items: center;
     align-content: center;
-   position: relative;
-right: 21vw;
-top:5vw;
+    position: relative;
+    right: 21vw;
+    top:5vw;
  }
  .add-book-btn:hover{
     background-color: rgb(34, 57, 105);
@@ -1394,8 +1372,8 @@ top:5vw;
 /*  ----publishers----*/
 .publishers-container{
     background-color: rgb(222, 230, 222);
- display: flex;
- flex-direction: column;
+    display: flex;
+    flex-direction: column;
     height : 80vh;
     width: 70%;
     margin-top: 7vw;
@@ -1450,7 +1428,7 @@ top:5vw;
 .search-publishers-btn{
     font-size: 1vw;
     font-weight: 700;
-   margin :  1vw auto;
+    margin :  1vw auto;
     padding: 0.5vw;
     border: 1px solid black;
     border-radius: 5px;
@@ -1474,7 +1452,6 @@ top:5vw;
     transition: 1s;
 }
 .publishers-list{
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1486,20 +1463,18 @@ top:5vw;
     margin-left: auto;
 }
 .publisher{
-
     height: 6vw;
     width: 50vw;
-  display: grid;
+    display: grid;
     grid-template-rows: 50% 50%;
     box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.8);;
   
 }
 .publisher-up{
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 0.5vw;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   padding: 0.5vw;
    
 }
 .publisher-down{
@@ -1515,9 +1490,6 @@ top:5vw;
     padding: 0;
     width: 10vw;
     text-align: center;
-
-    
- 
 }
 .publisher p{
     font-size: 1vw;
@@ -1526,9 +1498,6 @@ top:5vw;
     padding: 0;
     width: 10vw;
     text-align: center;
-
-    
- 
 }
 .pub-links{
    text-decoration: none;
@@ -1559,25 +1528,24 @@ top:5vw;
 
 /* add publisher */
 .add-publisher-container{
-    background-color: rgb(222, 230, 222);
- display: flex;
- flex-direction: column;
-    height : 80vh;
-    width: 70%;
-    margin-top: 7vw;
-    border-radius: 5px;
-    align-items: center;
-    align-content: center;
-    margin-right: auto;
-    margin-left: auto;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+   background-color: rgb(222, 230, 222);
+   display: flex;
+   flex-direction: column;
+   height : 80vh;
+   width: 70%;
+   margin-top: 7vw;
+   border-radius: 5px;
+   align-items: center;
+   align-content: center;
+   margin-right: auto;
+   margin-left: auto;
+   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 }
 .add-publisher-container h2{
     font-size: 3vw;
     font-weight: 700;
     margin-top: 2vw;
     color: rgb(7, 13, 61);
-
 }
 .add-publisher-container form {
     display: flex;
@@ -1652,33 +1620,31 @@ text-align: center;
     font-weight: 700;
     transition: 1s;
     scale: 1.1;
-    
-}
+    }
 
 .update-btn{
- 
-    font-weight: 700;
+   font-weight: 700;
    margin :  1vw auto;
-    padding: 0.5vw;
-    border: 1px solid black;
-    border-radius: 5px;
-    text-align: center;
-    background-color: rgb(71, 80, 160);
-    color: whitesmoke;
-    cursor: pointer;
-    transition: 1s;
-    direction: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-position: relative;
-right: 1.4vw;
+   padding: 0.5vw;
+   border: 1px solid black;
+   border-radius: 5px;
+   text-align: center;
+   background-color: rgb(71, 80, 160);
+   color: whitesmoke;
+   cursor: pointer;
+   transition: 1s;
+   direction: flex;
+   justify-content: center;
+   align-items: center;
+   align-content: center;
+   position: relative;
+   right: 1.4vw;
 }
 
 .favs-container{
     background-color: rgb(222, 230, 222);
- display: flex;
- flex-direction: column;
+    display: flex;
+    flex-direction: column;
     height : 80vh;
     width: 70%;
     margin-top: 7vw;
@@ -1708,6 +1674,10 @@ right: 1.4vw;
     display: none;
 }
 
+.add-author-mob{
+    display: none;
+}
+
 /*=================  media queries ===================*/
 
 @media only screen and (max-width: 770px) {
@@ -1720,10 +1690,7 @@ right: 1.4vw;
        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
         width: 98%;
         z-index: 2;
-      
-       
-    
-    }
+        }
     .search-books-container{
         background-color: transparent;
         display: flex;
@@ -2210,6 +2177,111 @@ justify-content: center;
 align-items: center;
 align-content: center;
 
+}
+.authors-container h1{
+    font-size: 5vw;
+
+    height: auto;
+}
+.authors-container form{
+    height: 140vw;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+    margin-top: 20vw;
+    margin-bottom: 6vw;
+}
+.authors-container label{
+    font-size: 3vw;
+    font-weight: 700;
+    color: rgb(7, 13, 61);
+    justify-self: center;
+    width: 20vw;
+    height: 1.2vw;
+    margin-bottom: 2vw;
+
+
+}
+
+.field{
+   
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   height: 15vw;
+}
+.field input{
+    width: 70vw;
+    height: 7vw;
+    margin: 0.5vw;
+    border-radius: 5px;
+    border: 1px solid rgb(27, 25, 25);
+    padding: 0.5vw;
+    font-size: 1.2vw;
+    font-weight: 700;
+}
+.field-date{
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   height: 15vw;
+
+}
+.field-date input{
+    width: 70vw;
+    height: 7vw;
+    margin: 0.5vw;
+    border-radius: 5px;
+    border: 1px solid rgb(27, 25, 25);
+    padding: 0.5vw;
+    font-size: 1.2vw;
+    font-weight: 700;
+}
+
+.field-about{
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   height: 15vw;
+}
+.field-about input{
+    width: 70vw;
+    height: 7vw;
+    margin: 0.5vw;
+    border-radius: 5px;
+    border: 1px solid rgb(27, 25, 25);
+    padding: 0.5vw;
+    font-size: 1.2vw;
+    font-weight: 700;
+        }
+
+        .add-author{
+            display: none;
+        }
+        .add-author-mob{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+            width: 90vw;
+            height: 10vw;
+        }
+.link-back{
+    text-decoration: none;
+    color: rgb(50, 31, 131);
+    cursor: pointer;
+    padding-right: 3vw ;
+    margin-top: 1vw;
+    position: relative;
+    left: 0vw;
+    top: 5vw
 }
 
 }
