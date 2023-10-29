@@ -1,8 +1,6 @@
 class Book < ApplicationRecord
   belongs_to :author
   belongs_to :publisher, optional: true
-  has_many :favorites
-  has_many :favorited_by, through: :favorites, source: :user
   validates :title, presence: true
   validates :isbn, presence: true, uniqueness: true
   validates :review, presence: true

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_10_28_233320) do
+ActiveRecord::Schema[7.0].define(version: 2023_10_26_190715) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -39,15 +39,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_28_233320) do
     t.bigint "publisher_id"
     t.index ["author_id"], name: "index_books_on_author_id"
     t.index ["publisher_id"], name: "index_books_on_publisher_id"
-  end
-
-  create_table "favorites", force: :cascade do |t|
-    t.bigint "user_id", null: false
-    t.bigint "book_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["book_id"], name: "index_favorites_on_book_id"
-    t.index ["user_id"], name: "index_favorites_on_user_id"
   end
 
   create_table "price_updates", force: :cascade do |t|
@@ -81,7 +72,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_28_233320) do
   add_foreign_key "authors", "publishers"
   add_foreign_key "books", "authors"
   add_foreign_key "books", "publishers"
-  add_foreign_key "favorites", "books"
-  add_foreign_key "favorites", "users"
   add_foreign_key "price_updates", "publishers"
 end

@@ -27,6 +27,12 @@ body{
    
 
 }
+.brand{
+    font-size: 3vw;
+    color: whitesmoke;
+    font-weight: 500;
+} 
+
 
 .search-books-container{
     background-color: transparent;
@@ -1698,6 +1704,9 @@ right: 1.4vw;
 .register-btn-mob{
     display: none;
 }
+.see-book-mob{
+    display: none;
+}
 
 /*=================  media queries ===================*/
 
@@ -1710,6 +1719,7 @@ right: 1.4vw;
         height: 25vw;
        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
         width: 98%;
+        z-index: 2;
       
        
     
@@ -2046,6 +2056,160 @@ align-items: center;
 }
 .register-btn-desk{
     display: none;
+}
+.brand{
+    display: flex;
+font-size: 5.5vw;
+color: rgba(11, 12, 97, 0.5);
+}
+
+.main-container{
+    background-color: rgb(222, 230, 222);    display: grid;
+display: flex;
+flex-direction: column;
+    height : 180vw;
+    border: 1px solid black;
+    margin: 0.3vw;
+    border-radius: 5px;
+    
+}
+
+.section-right{
+    margin-top: 6vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 80vw;
+    bottom: 48vw;
+    
+}
+.section-right h1{
+    font-size: 5vw;
+    font-weight: 700;
+    margin: 1vw;
+    color: rgb(7, 13, 61);
+
+}
+.books-list{
+    height: 120vw;
+    width: 90vw;
+    box-shadow: 0 0 10px 0 rgba(22, 13, 110, 0.5);
+    border-radius: 8px;
+    margin-top: 5vw;
+}
+.book-home-logged{
+    height: 15vw;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+.book-title-logged h3{
+    font-size: 3vw;
+    font-weight: 700;
+    margin: 1vw;
+    padding: 0;
+    width: 10vw;
+    text-align: center;
+    color: rgb(7, 13, 61);
+}
+.book-title-logged p{
+    font-size: 2.5vw;
+    font-weight: 700;
+    margin: 1vw;
+    padding: 0;
+    width: 10vw;
+    text-align: center;
+    color: rgb(7, 13, 61);
+    line-height: 2.4vw;
+}
+.book-author-logged h3{
+    font-size: 3vw;
+    font-weight: 700;
+    margin: 1vw;
+    padding: 0;
+    width: 10vw;
+    text-align: center;
+    color: rgb(7, 13, 61);
+}
+.book-author-logged p {
+    font-size: 2.5vw;
+    font-weight: 700;
+    margin: 1vw;
+    padding: 0;
+    width: 10vw;
+    text-align: center;
+    color: rgb(7, 13, 61);
+    line-height: 2.4vw;
+}
+
+.see-book-mob{
+    font-size: 2.5vw;
+    line-height: 2vw;
+    display: flex;
+}
+.see-book-desk{
+    display: none;
+}
+.section-left {
+    position: relative;
+    top: 110vw;
+    width: 90vw;
+    left: 4vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+}
+
+
+.admin-panel{
+    height: 65vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;;
+    align-items: center;
+
+    border-radius: 8px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    width: 90vw;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+.admin-panel h1{
+    font-size: 6vw;
+    font-weight: 700;
+    margin: 1vw;
+}
+
+.admin-panel button{
+font-size: 3vw;
+font-weight: 700;
+margin :  1vw auto;
+padding: 0.5vw;
+border: 1px solid black;
+border-radius: 5px;
+width: 10vw;
+text-align: center;
+background-color: rgb(71, 80, 160);
+color: whitesmoke;
+cursor: pointer;
+transition: 1s;
+height: 7vw;
+width: 22vw;
+direction: flex;
+justify-content: center;
+align-items: center;
+align-content: center;
+
 }
 
 }

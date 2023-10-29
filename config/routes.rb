@@ -17,9 +17,7 @@ Rails.application.routes.draw do
       get 'about_modal' # Add this line to define the new action
     end
   end
-  resources :users do
-    resources :favorites, only: [:index, :create, :destroy]
-  end
+
 
   resources :books do
     member do
@@ -28,11 +26,7 @@ Rails.application.routes.draw do
   end
   resources :books
   resources :authors
-  resources :favorites
 
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
 
   root 'books#home'
   resources :price_updates, only: [:new, :create]

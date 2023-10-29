@@ -1,6 +1,8 @@
 class ApplicationController < ActionController::Base
   before_action :update_allowed_parameters, if: :devise_controller?
-
+  before_action :set_books_present
+  protected
+ 
   def after_sign_in_path_for(resource)
     # Customize the redirection logic here
     if resource.is_a?(User) # Check if the resource is a User (Devise's default)
@@ -9,6 +11,9 @@ class ApplicationController < ActionController::Base
     else
       super
     end
+  end
+  def set_books_present
+    @books_present = Book.any?
   end
 
   def update_allowed_parameters

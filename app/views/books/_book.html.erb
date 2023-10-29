@@ -9,7 +9,8 @@
     <h3> Author: </h3>
     <p><%= book.author_name %></p>
     </div>
-     <%=  link_to  "See Book" , book_path(book.id)%>
+         <%=  link_to  "See Book" , book_path(book.id)  , class:"see-book-desk"%>
+     <%=  link_to  "See Book" , book_path(book.id)  , style:"font-size: 2.5vw;line-height: 2.8vw  ", class:"see-book-mob"%>
     </div>
 
 <%end%>

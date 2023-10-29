@@ -1,6 +1,11 @@
 <main class="navbar-container">
 <div >
+<% if  !@books_present %>
+
+ <p class="brand"> Bookstore</p>
+<%else%>
  <%= render partial:  "books/search" %>
+<%end%>
 
 
 </div>
