@@ -1688,8 +1688,8 @@ right: 1.4vw;
         background-color: rgb(225, 227, 252);
         display: flex;
         flex-direction: column;
-        height: 80vw;
-        border: 2px solid rgb(7, 13, 61);
+        height: 25vw;
+       box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
         width: 98%;
       
        
@@ -1701,12 +1701,10 @@ right: 1.4vw;
         width: 90vw;
         height: 10vw;
         justify-content: space-around;
-        border: 3px solid rgb(7, 13, 61);
         position: relative;
-        bottom: 16vw;
+        bottom: 1vw;
     }
     .search-books-form{
-        background-color: red;
         display: flex;
         width: 90vw;
         height: 10vw;
@@ -1715,21 +1713,21 @@ right: 1.4vw;
     }
     .search-books-form input{
         width: 35vw;
-        height: 6vw;
+        height: 10vw;
         border-radius: 5px;
         border: 1px solid rgb(27, 25, 25);
         padding: 0.5vw;
-        font-size: 1.2vw;
+        font-size: 2.5vw;
         font-weight: 700;
     
     }
     .search-select{
         width: 25vw;
-        height: 7.3vw;
+        height: 11.5vw;
         border-radius: 5px;
         border: 1px solid rgb(27, 25, 25);
         padding: 0.5vw;
-        font-size: 1.2vw;
+        font-size: 2.5vw;
         font-weight: 700;
         margin: 0 1.2vw;
     }
@@ -1741,6 +1739,7 @@ right: 1.4vw;
     .search-btn-mobile{
         display: flex;
         width: 15vw;
+        font-size: 2vw;
     }
     .search-btn:hover{
         background-color: rgb(34, 57, 105);
@@ -1751,17 +1750,128 @@ right: 1.4vw;
     
     .logout-btn{
         background-color: rgb(233, 233, 228);
-        margin-right: 1vw;
-        margin-left: 1vw;
-        font-size: 1.2vw;
+    
+        font-size: 2.6vw;
         font-weight: 700;
         border-radius: 5px;
         border: 1px solid rgb(27, 25, 25);
         padding: 0.5vw;
         transition: 1s;
-        height: 3vw;
+        height: 8vw;
+        width: 15vw;
+        position: relative;
+        bottom: 0vw;
     }
 
+    .login-btn{
+        background-color: rgb(233, 233, 228);
+        margin-right: 1vw;
+        margin-left: 1vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.6vw;
+        font-weight: 700;
+        border-radius: 5px;
+        border: 1px solid rgb(8, 1, 32);
+        padding: 0.5vw;
+        transition: 1s;
+        height: 6vw;
+        width: 16vw;
+        text-decoration: none;
+        text-align: center;
+    }
+    .register-btn{
+        background-color: rgb(212, 216, 230);
+        margin-right: 1vw;
+        margin-left: 1vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.6vw;
+        font-weight: 700;
+        border-radius: 5px;
+        border: 1px solid rgb(6, 5, 32);
+        padding: 0.5vw;
+        transition: 1s;
+        height: 6vw;
+        width: 16vw;
+        text-decoration: none;
+        text-align: center;
+      
+    }
+    .nav-btns{
 
+        width: 90vw;
+        }
+.home-container{
+    background-color: rgb(222, 230, 222);
+    display: flex;
+    flex-direction: column;
+  
+    height : 80vh;
+    width: 90%;
+    margin-top: 28vw;
+    border-radius: 5px;
+    margin-right: auto;
+    margin-left: auto;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+}
+.home-container h1{
+    font-size: 6vw;
+    font-weight: 700;
+    margin-top: 2vw;
+    color: rgb(7, 13, 61);
+    position: relative;
+    bottom: 20vw;
+}
+.books-home{
+    height: 60vw;
+     width: 80vw;
+     
+    }
+    .book-home{
+       
+        background-color: rgb(222, 230, 222);
+        height: 15vw;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+        width: 80vw;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;
+    }
+   
+.book-home h3{
+    font-size: 3vw;
+    font-weight: 700;
+    margin: 1vw;
+    padding: 0;
+    width: 10vw;
+    text-align: center;
+    color: rgb(7, 13, 61);
+}
+.book-home p{
+    font-size: 2.5vw;
+    font-weight: 700;
+    margin: 1vw;
+    padding: 0;
+    width: 10vw;
+    text-align: center;
+    color: rgb(7, 13, 61);
+    line-height: 2.4vw;
     
+}
+.book-home a{
+    font-size: 2.5vw;
+    font-weight: 700;
+    margin: 1vw;
+    padding: 0;
+    width: 10vw;
+    text-align: center;
+    color: rgb(7, 13, 61);
+    line-height: 2.4vw;
+    text-decoration: none;
+}
 }
