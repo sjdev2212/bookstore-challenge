@@ -6,7 +6,9 @@
 </div>
  <%else%>
  <%if user_signed_in?%>
- <p>user  whishlist</p>
+ <section class="browser">
+ <p>Browse books</p>
+ </section>
   <%end%>
  <%end%>
 </section>
@@ -34,7 +36,7 @@
 <%end%>
 
 
-<div class="books-list">
+<div class="books-list ">
 
     <%= render partial:  '/books/book' %>
   
