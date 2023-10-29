@@ -1696,6 +1696,7 @@ right: 1.4vw;
 .register-btn-mob{
     display: none;
 }
+
 /*=================  media queries ===================*/
 
 @media only screen and (max-width: 770px) {
@@ -2030,20 +2031,19 @@ align-items: center;
     height: 5vw;
 }
  
-.register-btn{
- 
-   display: none;
-}
-.register-btn-mob{
-    display: flex;
-}
+
+
 .register-btn:hover{
     background-color: rgb(34, 57, 105);
     color: rgb(195, 198, 218);
     font-weight: 700;
     transition: 1s;
 }
-
-
+.register-btn-mob{
+    display: flex;
+}
+.register-btn-desk{
+    display: none;
+}
 
 }
