@@ -20,23 +20,23 @@
 <h1>Add Author</h1>
     <div class="field">
       <%= f.label :first_name %>
-      <%= f.text_field :first_name %>
+      <%= f.text_field :first_name , required: true %>
     </div>
       <div class="field">
       <%= f.label :last_name %>
-      <%= f.text_field :last_name %>
+      <%= f.text_field :last_name , required: true %>
     </div>
          <div class="field-date">
       <%= f.label :date_of_birth %>
-   <%= f.date_field :date_of_birth %>
+   <%= f.date_field :date_of_birth , required: true %>
     </div>
          <div class="field">
       <%= f.label :about %>
-      <%= f.text_area :about %>
+      <%= f.text_area :about , required: true %>
     </div>
          <div class="field-about">
       <%= f.label :nationality %>
-      <%= f.text_field  :nationality %>
+      <%= f.text_field  :nationality , required: true %>
     </div>
      
     

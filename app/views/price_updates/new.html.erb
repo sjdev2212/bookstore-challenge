@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :percentage, 'Percentage' %>
-    <%= f.number_field :percentage, step: 0.01 %>
+    <%= f.number_field :percentage, step: 0.01 , required: true %>
   </div>
 
   <%= f.submit 'Update Prices', style:"width: 8vw; height: 3.5vw; font-size: 1vw", class: 'update-btn' %>

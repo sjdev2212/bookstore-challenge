@@ -1,24 +1,68 @@
-# README
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Bookstore
 
-Things you may want to cover:
+> ROR app to add books as an admin or browse books as a user
 
-* Ruby version
+![screenshot](./app/assets/images/p3.png)
+ Application buit with Ruby on Rails
 
-* System dependencies
+## Live demo
 
-* Configuration
+[www.ExpenseTracker.com](https://gentle-headland-22451.herokuapp.com)
 
-* Database creation
+## Built With
 
-* Database initialization
+- Major languages: Ruby
+- Frameworks: ROR
+- Gems: devise
 
-* How to run the test suite
+## Getting Started
 
-* Services (job queues, cache servers, search engines, etc.)
+To get a local copy up and running follow these simple example steps.
 
-* Deployment instructions
+### Prerequisites
 
-* ...
+You need to have followings installed in your local machine:
+
+- `Ruby`
+- `Postgresql`
+- `Rails`
+- `node.js`
+
+### Setup
+
+To setup the project in your local, in the repo page:
+
+- click on code (dropdown list) > Download as ZIP.
+- or open terminal of path you want to install project and run this command:
+  `git clone  https://github.com/sjdev2212/bookstore-challenge.git`
+- `cd bookstore/`
+- `bundle install`
+- `bin/rails db:create`
+- `bin/rails db:migrate`
+
+## Instruction on the usage
+
+- Run the following comands in your command line:
+- `rails s`
+- `open any chrome/firefox`
+- `type "localhost:3000"`
+- `enjoy the app`
+
+## Author
+
+👤 **Anibal Amoroso**
+
+- GitHub: [@s](https://github.com/sjdev)jdev
+- LinkedIn: [LinkedIn](https://linkedin.com/in/anibalamoroso/)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/sj1978/budget-app/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!

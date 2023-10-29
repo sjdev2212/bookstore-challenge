@@ -22,11 +22,11 @@
 
     <div class="field">
       <%= f.label :title %>
-      <%= f.text_field :title %>
+      <%= f.text_field :title , required: true %>
     </div>
       <div class="field">
       <%= f.label :isbn %>
-      <%= f.number_field :isbn %>
+      <%= f.number_field :isbn , required: true %>
     </div>
          <div class="field">
       <%= f.label :author_name %>
@@ -34,17 +34,17 @@
     </div>
          <div class="field">
       <%= f.label :review, style: "margin-bottom: 0.3vw" ,class:"review-label-mob" %>
-      <%= f.text_area :review %>
+      <%= f.text_area :review , required: true %>
     </div>
     </section>
     <section class="section-form-left">
          <div class="field">
       <%= f.label :date_of_publication %>
-      <%= f.date_field  :date_of_publication %>
+      <%= f.date_field  :date_of_publication , required: true%>
     </div>
         <div class="field">
       <%= f.label :price %>
-      <%= f.number_field  :price %>
+      <%= f.number_field  :price  , required: true%>
     </div>
 <div class="field">
   <%= f.label :publisher_id  , style: "margin-bottom: 0.2vw"%>
