@@ -1,6 +1,8 @@
 class Book < ApplicationRecord
   belongs_to :author
   belongs_to :publisher, optional: true
+  has_many :favorites
+  has_many :favorited_by, through: :favorites, source: :user
   validates :title, presence: true
   validates :isbn, presence: true, uniqueness: true
   validates :review, presence: true
@@ -10,8 +12,6 @@ class Book < ApplicationRecord
   validates :title, length: { maximum: 255 }
   validates :review, length: { maximum: 1000 }
   validate :date_of_publication_not_in_future
-
-
 
   def date_of_publication_not_in_future
     if date_of_publication.present? && date_of_publication > Date.today

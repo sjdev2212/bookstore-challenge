@@ -48,7 +48,6 @@ class BooksController < ApplicationController
     @book = @author.books.build(book_params)
 
     if params[:book][:new_publisher_name].present?
-      # If a new publisher name is provided, create a new publisher
       @book.publisher = Publisher.create(name: params[:book][:new_publisher_name])
     end
 
@@ -78,10 +77,6 @@ class BooksController < ApplicationController
     # Book deleted successfully
     redirect_to books_url, notice: 'Book was successfully deleted.'
   end
-
-
-  
-
 
   private
 

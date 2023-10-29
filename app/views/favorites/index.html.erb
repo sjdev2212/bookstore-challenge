@@ -1,0 +1,15 @@
+
+<main class="favs-container">
+<h1>Favs</h1>
+<h1>Your Favorite Books</h1>
+
+<ul>
+  <% @favorites.each do |favorite| %>
+    <li>
+      <%= favorite.title %>
+      <%= link_to 'Remove from Favorites', user_favorite_path(current_user, favorite), method: :delete %>
+    </li>
+  <% end %>
+</ul>
+</main>
+
