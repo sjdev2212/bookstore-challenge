@@ -4,9 +4,7 @@ class ApplicationController < ActionController::Base
   protected
  
   def after_sign_in_path_for(resource)
-    # Customize the redirection logic here
-    if resource.is_a?(User) # Check if the resource is a User (Devise's default)
-      # Redirect to the dashboard or any other path
+    if resource.is_a?(User) 
       books_path
     else
       super

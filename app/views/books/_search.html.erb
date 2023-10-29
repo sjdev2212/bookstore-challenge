@@ -2,7 +2,7 @@
 <%= form_tag(books_path, method: :get) do %>
 <section class="search-books-form">
   <div class="">
-    <%= text_field_tag :search, params[:search], class: 'form-control', placeholder: 'Search books...' %>
+    <%= text_field_tag :search, params[:search], class: 'form-control', placeholder: 'Search books by...' %>
   </div>
   <div class="">
     <%= select_tag :search_by, options_for_select(['Title', 'ISBN', 'Author', 'Publisher'], params[:search_by]), class: 'search-select' %>

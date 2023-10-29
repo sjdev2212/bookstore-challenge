@@ -6,7 +6,7 @@ class BooksController < ApplicationController
   end
 
   def index
-    @user = current_user.role
+    @user = current_user
     @search = params[:search]
     @search_by = params[:search_by]
     @books = Book.paginate(page: params[:page], per_page: 5)
