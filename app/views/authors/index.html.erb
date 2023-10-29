@@ -28,8 +28,10 @@
 <%end%>
 </section>
 <div class="authors-links"> 
-<%= link_to "Add new author", new_author_path %>
- <%= link_to "Home", books_path %>
+<%= link_to "Add new author", new_author_path ,style:"font-size : 3vw; width: 10vw"  ,class:"add-btn-mob " %>
+ <%= link_to "Home", books_path,style:"font-size : 3vw; width: 10vw" , class:" home-author-mob " %>
+ <%= link_to "Add new author", new_author_path  ,class:"add-btn-desk " %>
+ <%= link_to "Home", books_path, class:" home-author-desk " %>
 </div>
 <div class="pagination-logged">
 <%= will_paginate @books %>

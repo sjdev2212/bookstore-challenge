@@ -33,7 +33,7 @@
    <%= f.text_field :author_name, value: @full_name, readonly: true %>
     </div>
          <div class="field">
-      <%= f.label :review, style: "margin-bottom: 0.3vw" %>
+      <%= f.label :review, style: "margin-bottom: 0.3vw" ,class:"review-label-mob" %>
       <%= f.text_area :review %>
     </div>
     </section>
@@ -55,6 +55,7 @@
 <%= link_to "Create a new publisher", new_publisher_path %>
 
     <%= f.submit "Create Book", style: "width: 14vw; height: 4.5vw" ,class:"add-book-btn"%>
+      <%= f.submit "Create Book", style: "width: 20vw; height: 6vw;font-size: 2vw" ,class:"add-book-btn-mob"%>
   <% end %>
   </section>
 <% else %>
