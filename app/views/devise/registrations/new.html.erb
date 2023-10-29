@@ -1,9 +1,9 @@
 <main class="register-container">
-<h2 class="register-title">Sign up</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
+<h2 class="register-title">Sign up</h2>
   <div>
     <%= f.label :email,   class:"email-label"  %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
@@ -21,13 +21,14 @@
     <%= f.label :password_confirmation, class:"password-label" %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
-   <div class="field">
+   <div >
     <%= f.label :role, class:"role-label"%><br />
     <%= f.text_field :role  %>
   </div>
 
  
     <%= f.submit "Sign up", style: "height: 50px;width: 20vw; padding: 10px 20px;",class: "register-btn" %>
+      <%= f.submit "Sign up", style: "height: 10vw;width: 30vw; padding: 10px 20px;font-size: 3vw",class: "register-btn-mob" %>
 
 <% end %>
   <div class="addpub-back-link">
