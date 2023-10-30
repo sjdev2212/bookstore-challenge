@@ -1,4 +1,3 @@
-
 # Bookstore
 
 > ROR app to add books as an admin or browse books as a user
@@ -9,69 +8,61 @@
 >
 > password: 313131
 >
-> The administrator can add, delete, update books authors and publisher.  The regular user can sign up or login and browse book.  
+> The administrator can add, delete, update books authors and publisher.  The regular user can sign up or login and browse book.
 >
 > Athentication using Devise.
 >
 > Authorization using Cancancan
->
 
  Application buit with Ruby on Rails
 
 ## Live demo deployed on Render
 
-[Bookstore]()
+[Bookstore](https://bookstore-qou1.onrender.com/)
 
 ## Api Endpoints
 
 Get all available books
 
-https://bookstore-qou1.onrender.com/api/books
+[https://bookstore-qou1.onrender.com/api/books](https://bookstore-qou1.onrender.com/api/books)
 
 Get 1 book by id
 
-https://bookstore-qou1.onrender.com/api/book/:id
+[https://bookstore-qou1.onrender.com/api/book/:id](https://bookstore-qou1.onrender.com/api/book/5)
 
 Post  book (create book)
 
-[https://bookstore-qou1.onrender.com/api/book]()s
+[https://bookstore-qou1.onrender.com/api/book](https://bookstore-qou1.onrender.com/api/books)s
 
  Put  Update book
 
-https://bookstore-qou1.onrender.com/api/books/:id
+[https://bookstore-qou1.onrender.com/api/books/:id](https://bookstore-qou1.onrender.com/api/books/:id)
 
 Delete book
 
-[https://bookstore-qou1.onrender.com/api/book]()s/:id
+[https://bookstore-qou1.onrender.com/api/book](https://bookstore-qou1.onrender.com/api/books/:id)s/:id
 
+Pagination
 
-Pagination  
-
-[https://bookstore-qou1.onrender.com/api/books?page=1&amp;per_page=5]()
+[https://bookstore-qou1.onrender.com/api/books?page=1&amp;per_page=5](https://bookstore-qou1.onrender.com/api/books?page=1&per_page=5])
 
 Filter books by Title
 
 Get
 
-[https://bookstore-qou1.onrender.com/api/books/filter_title?title=norwegian]()
+[https://bookstore-qou1.onrender.com/api/books/filter_title?title=norwegian](https://bookstore-qou1.onrender.com/api/books/filter_title?title=norwegian)
 
-Filter by price range 
+Filter by price range
 
-Get 
+Get
 
-[https://bookstore-qou1.onrender.com/api/books/filter_price?min_price=1&amp;max_price=10]()
+[https://bookstore-qou1.onrender.com/api/books/filter_price?min_price=1&amp;max_price=10](https://bookstore-qou1.onrender.com/api/books/filter_price?min_price=1&amp;&max_price=10)
 
 Filter by author name
 
-Get 
+Get
 
-[https://bookstore-qou1.onrender.com/api/books/filter_author?author=king]()
-
-
-
-
-
-
+[https://bookstore-qou1.onrender.com/api/books/filter_author?author=kin](https://bookstore-qou1.onrender.com/api/books/filter_author?author=king)g
 
 ## Built With
 
@@ -115,8 +106,8 @@ To setup the project in your local, in the repo page:
 
 👤 **Anibal Amoroso**
 
-- [GitHub: ](https://github.com/sjdev2212)
--  [LinkedIn](https://linkedin.com/in/anibalamoroso/)
+- GitHub:
+- [LinkedIn](https://linkedin.com/in/anibalamoroso/)
 
 ## 🤝 Contributing
 
