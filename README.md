@@ -18,7 +18,7 @@
 
  Application buit with Ruby on Rails
 
-## Live demo
+## Live demo deployed on Render
 
 [Bookstore]()
 
