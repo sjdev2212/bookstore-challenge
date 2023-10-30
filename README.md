@@ -115,14 +115,14 @@ To setup the project in your local, in the repo page:
 
 👤 **Anibal Amoroso**
 
-- GitHub: [@s](https://github.com/sjdev)jdev
-- LinkedIn: [LinkedIn](https://linkedin.com/in/anibalamoroso/)
+- [GitHub: ](https://github.com/sjdev2212)
+-  [LinkedIn](https://linkedin.com/in/anibalamoroso/)
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/sj1978/budget-app/issues).
+Feel free to check the [issues page](https://github.com/sjdev2212/bookstore-challenge/issues).
 
 ## Show your support
 
