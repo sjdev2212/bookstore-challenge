@@ -1,7 +1,16 @@
 class Api::BooksController < ApplicationController
   def index
-    @books = Book.all
-    render json: @books
+    @books = Book.paginate(page: params[:page], per_page: params[:per_page] || 10)
+    render json: @books, meta: pagination(@books)
+  end
+
+  def pagination(collection)
+    {
+      current_page: collection.current_page,
+      per_page: collection.per_page,
+      total_pages: collection.total_pages,
+      total_entries: collection.total_entries
+    }
   end
 
   def show

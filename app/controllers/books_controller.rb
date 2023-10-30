@@ -40,7 +40,7 @@ class BooksController < ApplicationController
     @author = Author.find(params[:author_id])
     @full_name = "#{@author.first_name} #{@author.last_name}"
     @book = @author.books.build
-    @publishers = Publisher.all # F
+    @publishers = Publisher.all 
   end
 
   def create
@@ -71,7 +71,7 @@ class BooksController < ApplicationController
   end
 
   def destroy
-    @book = Book.find(params[:id]) # Find the book to delete
+    @book = Book.find(params[:id]) 
     @book.destroy
 
     # Book deleted successfully

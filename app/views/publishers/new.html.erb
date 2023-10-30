@@ -1,9 +1,6 @@
 <main class="add-publisher-container">
 <h2>Add Publisher</h2>
-
-
-
-  <%= form_for [@publisher] do |f| %>
+<%= form_for [@publisher] do |f| %>
     <% if @publisher.errors.any? %>
       <div id="error_explanation">
         <h2><%= pluralize(@publisher.errors.count, "error") %> prohibited this publisher from being saved:</h2>
@@ -23,9 +20,7 @@
 
     <%= f.submit "Add Publisher", style:"height: 3vw; width:10vw" ,class:"add-pub-btn" %>
   <% end %>
-
-
-    </main>
+</main>
 <div class="addpub-back-link">
   <%= link_to "Back", books_path %>
 </div>

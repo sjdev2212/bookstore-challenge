@@ -4,18 +4,33 @@
 
 > ROR app to add books as an admin or browse books as a user
 
-![screenshot](./app/assets/images/p3.png)
+
  Application buit with Ruby on Rails
 
 ## Live demo
 
-[www.ExpenseTracker.com](https://gentle-headland-22451.herokuapp.com)
+[Bookstore]()
+
+
+## Api Endpoints 
+
+Get all available books
+
+[https://bookstore-qou1.onrender.com/api/books]()
+
+Get 1 book by id 
+
+[https://bookstore-qou1.onrender.com/api/book/:id]()
+
+
+
+
 
 ## Built With
 
 - Major languages: Ruby
 - Frameworks: ROR
-- Gems: devise
+- Gems: devise, bigdecimal, will_paginate, cancancan,
 
 ## Getting Started
 
@@ -25,17 +40,16 @@ To get a local copy up and running follow these simple example steps.
 
 You need to have followings installed in your local machine:
 
-- `Ruby`
+- Ruby '3.1.2'
 - `Postgresql`
-- `Rails`
-- `node.js`
+- `Rails 7`
 
 ### Setup
 
 To setup the project in your local, in the repo page:
 
-- click on code (dropdown list) > Download as ZIP.
-- or open terminal of path you want to install project and run this command:
+- 
+- Open terminal of path you want to install project and run this command:
   `git clone  https://github.com/sjdev2212/bookstore-challenge.git`
 - `cd bookstore/`
 - `bundle install`
@@ -46,7 +60,7 @@ To setup the project in your local, in the repo page:
 
 - Run the following comands in your command line:
 - `rails s`
-- `open any chrome/firefox`
+- `open any browser`
 - `type "localhost:3000"`
 - `enjoy the app`
 
