@@ -1,8 +1,20 @@
-()![img](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Bookstore
 
 > ROR app to add books as an admin or browse books as a user
+>
+> Admin credentials
+>
+> user:  admin@gmail.com
+>
+> password: 313131
+>
+> The administrator can add, delete, update books authors and publisher.  The regular user can sign up or login and browse book.  
+>
+> Athentication using Devise.
+>
+> Authorization using Cancancan
+>
 
  Application buit with Ruby on Rails
 
@@ -14,11 +26,11 @@
 
 Get all available books
 
-[https://bookstore-qou1.onrender.com/api/books]()
+https://bookstore-qou1.onrender.com/api/books
 
 Get 1 book by id
 
-[https://bookstore-qou1.onrender.com/api/book/:id]()
+https://bookstore-qou1.onrender.com/api/book/:id
 
 Post  book (create book)
 
@@ -26,33 +38,35 @@ Post  book (create book)
 
  Put  Update book
 
-[https://bookstore-qou1.onrender.com/api/book]()s/:id
+https://bookstore-qou1.onrender.com/api/books/:id
 
 Delete book
 
 [https://bookstore-qou1.onrender.com/api/book]()s/:id
 
-Filter books for title
 
-Get 
+Pagination  
 
-[https://bookstore-qou1.onrender.com/api/book]()s/filter?title=booktitle
+[https://bookstore-qou1.onrender.com/api/books?page=1&amp;per_page=5]()
+
+Filter books by Title
+
+Get
+
+[https://bookstore-qou1.onrender.com/api/books/filter_title?title=norwegian]()
 
 Filter by price range 
 
 Get 
 
-[https://bookstore-qou1.onrender.com/api/book]()s/filter?min_price=10&max_price =20
+[https://bookstore-qou1.onrender.com/api/books/filter_price?min_price=1&amp;max_price=10]()
 
-Filter by author id
+Filter by author name
 
 Get 
 
-[https://bookstore-qou1.onrender.com/api/books/filter?]()author_id=:id
+[https://bookstore-qou1.onrender.com/api/books/filter_author?author=king]()
 
-Filter by author name 
-
-[https://bookstore-qou1.onrender.com/api/books/filter?]()author_name=name
 
 
 

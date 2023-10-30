@@ -18,7 +18,6 @@ Rails.application.routes.draw do
     end
   end
 
-
   resources :books do
     member do
       get 'review_modal', to: 'books#review_modal'
@@ -26,7 +25,6 @@ Rails.application.routes.draw do
   end
   resources :books
   resources :authors
-
 
   root 'books#home'
   resources :price_updates, only: [:new, :create]
@@ -41,5 +39,3 @@ Rails.application.routes.draw do
     end
   end
 end
-
-

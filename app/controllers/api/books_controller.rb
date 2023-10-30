@@ -39,59 +39,53 @@ class Api::BooksController < ApplicationController
   def filter_title
     # Apply filtering
     filtered_books = Book.all
-    
-  
+
     if params[:title].present?
       filtered_books = filtered_books.where("title ILIKE ?", "%#{params[:title]}%")
     end
-  
+
     if filtered_books.empty?
       render json: { message: 'No books match the filter criteria' }, status: :not_found
       return
     end
-  
+
     filtered_books = filtered_books.paginate(page: params[:page], per_page: params[:per_page])
 
     render json: filtered_books
   end
 
   def filter_author
-    # Apply filtering
     filtered_books = Book.all
-    
-  
+
     if params[:author].present?
       filtered_books = filtered_books.where("author_name ILIKE ?", "%#{params[:author]}%")
     end
-  
+
     if filtered_books.empty?
       render json: { message: 'No books match the filter criteria' }, status: :not_found
       return
     end
-  
+
     filtered_books = filtered_books.paginate(page: params[:page], per_page: params[:per_page])
-    
+
     render json: filtered_books
   end
 
   def filter_price
-  
     filtered_books = Book.all
-    
-  
+
     if params[:min_price].present? && params[:max_price].present?
       filtered_books = filtered_books.where("price >= ? AND price <= ?", params[:min_price], params[:max_price])
     end
-  
+
     if filtered_books.empty?
       render json: { message: 'No books match the filter criteria' }, status: :not_found
       return
     end
-  
+
     filtered_books = filtered_books.paginate(page: params[:page], per_page: params[:per_page])
     render json: filtered_books
   end
-  
 
   private
 
