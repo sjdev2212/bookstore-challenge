@@ -50,6 +50,10 @@ Get
 
 [https://bookstore-qou1.onrender.com/api/books/filter?]()author_id=:id
 
+Filter by author name 
+
+[https://bookstore-qou1.onrender.com/api/books/filter?]()author_name=name
+
 
 
 

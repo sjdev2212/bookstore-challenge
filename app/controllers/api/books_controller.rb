@@ -1,5 +1,5 @@
 class Api::BooksController < ApplicationController
-  skip_before_action :verify_authenticity_token, only: [:create, :update, :destroy]
+  skip_before_action :verify_authenticity_token, only: [:create, :update, :destroy, :filter]
   def index
     @books = Book.paginate(page: params[:page], per_page: params[:per_page] || 10)
     render json: @books, meta: pagination(@books)
@@ -36,26 +36,62 @@ class Api::BooksController < ApplicationController
     render json: { message: 'Book Deleted' }
   end
 
-
-  def filter
+  def filter_title
+    # Apply filtering
+    filtered_books = Book.all
+    
   
-    filtered_books = Book.paginate(page: params[:page], per_page: params[:per_page] || 10)
-    render json: @books, meta: pagination(@books)
-
     if params[:title].present?
       filtered_books = filtered_books.where("title ILIKE ?", "%#{params[:title]}%")
     end
-
-    if params[:min_price].present? && params[:max_price].present?
-      filtered_books = filtered_books.where(price: params[:min_price]..params[:max_price])
+  
+    if filtered_books.empty?
+      render json: { message: 'No books match the filter criteria' }, status: :not_found
+      return
     end
-
-    if params[:author_id].present?
-      filtered_books = filtered_books.where(author_id: params[:author_id])
-    end
+  
+    filtered_books = filtered_books.paginate(page: params[:page], per_page: params[:per_page])
 
     render json: filtered_books
   end
+
+  def filter_author
+    # Apply filtering
+    filtered_books = Book.all
+    
+  
+    if params[:author].present?
+      filtered_books = filtered_books.where("author_name ILIKE ?", "%#{params[:author]}%")
+    end
+  
+    if filtered_books.empty?
+      render json: { message: 'No books match the filter criteria' }, status: :not_found
+      return
+    end
+  
+    filtered_books = filtered_books.paginate(page: params[:page], per_page: params[:per_page])
+    
+    render json: filtered_books
+  end
+
+  def filter_price
+  
+    filtered_books = Book.all
+    
+  
+    if params[:min_price].present? && params[:max_price].present?
+      filtered_books = filtered_books.where("price >= ? AND price <= ?", params[:min_price], params[:max_price])
+    end
+  
+    if filtered_books.empty?
+      render json: { message: 'No books match the filter criteria' }, status: :not_found
+      return
+    end
+  
+    filtered_books = filtered_books.paginate(page: params[:page], per_page: params[:per_page])
+    render json: filtered_books
+  end
+  
 
   private
 

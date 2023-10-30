@@ -34,7 +34,9 @@ Rails.application.routes.draw do
   namespace :api do
     resources :books do
       collection do
-        get 'filter'
+        get 'filter_title'
+        get 'filter_author'
+        get 'filter_price'
       end
     end
   end
