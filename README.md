@@ -106,7 +106,7 @@ To setup the project in your local, in the repo page:
 
 👤 **Anibal Amoroso**
 
-- GitHub:
+- [GitHub:](https://github.com/sjdev2212)
 - [LinkedIn](https://linkedin.com/in/anibalamoroso/)
 
 ## 🤝 Contributing
