@@ -32,6 +32,12 @@ Rails.application.routes.draw do
   resources :price_updates, only: [:new, :create]
 
   namespace :api do
-    resources :books
+    resources :books do
+      collection do
+        get 'filter'
+      end
+    end
   end
 end
+
+

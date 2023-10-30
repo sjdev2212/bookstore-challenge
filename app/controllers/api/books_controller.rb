@@ -1,4 +1,5 @@
 class Api::BooksController < ApplicationController
+  skip_before_action :verify_authenticity_token, only: [:create, :update, :destroy]
   def index
     @books = Book.paginate(page: params[:page], per_page: params[:per_page] || 10)
     render json: @books, meta: pagination(@books)
@@ -33,6 +34,26 @@ class Api::BooksController < ApplicationController
     @book = Book.find_by_id(params[:id])
     @book.destroy
     render json: { message: 'Book Deleted' }
+  end
+
+
+  def filter
+  
+    filtered_books = Book.all
+
+    if params[:name].present?
+      filtered_books = filtered_books.where("name ILIKE ?", "%#{params[:name]}%")
+    end
+
+    if params[:min_price].present? && params[:max_price].present?
+      filtered_books = filtered_books.where(price: params[:min_price]..params[:max_price])
+    end
+
+    if params[:author_id].present?
+      filtered_books = filtered_books.where(author_id: params[:author_id])
+    end
+
+    render json: filtered_books
   end
 
   private

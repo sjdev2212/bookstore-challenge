@@ -1,9 +1,8 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+()![img](https://img.shields.io/badge/Microverse-blueviolet)
 
 # Bookstore
 
 > ROR app to add books as an admin or browse books as a user
-
 
  Application buit with Ruby on Rails
 
@@ -11,16 +10,46 @@
 
 [Bookstore]()
 
-
-## Api Endpoints 
+## Api Endpoints
 
 Get all available books
 
 [https://bookstore-qou1.onrender.com/api/books]()
 
-Get 1 book by id 
+Get 1 book by id
 
 [https://bookstore-qou1.onrender.com/api/book/:id]()
+
+Post  book (create book)
+
+[https://bookstore-qou1.onrender.com/api/book]()s
+
+ Put  Update book
+
+[https://bookstore-qou1.onrender.com/api/book]()s/:id
+
+Delete book
+
+[https://bookstore-qou1.onrender.com/api/book]()s/:id
+
+Filter books for title
+
+Get 
+
+[https://bookstore-qou1.onrender.com/api/book]()s/filter?title=booktitle
+
+Filter by price range 
+
+Get 
+
+[https://bookstore-qou1.onrender.com/api/book]()s/filter?min_price=10&max_price =20
+
+Filter by author id
+
+Get 
+
+[https://bookstore-qou1.onrender.com/api/books/filter?]()author_id=:id
+
 
 
 
