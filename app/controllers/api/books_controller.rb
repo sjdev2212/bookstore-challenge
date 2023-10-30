@@ -39,10 +39,11 @@ class Api::BooksController < ApplicationController
 
   def filter
   
-    filtered_books = Book.all
+    filtered_books = Book.paginate(page: params[:page], per_page: params[:per_page] || 10)
+    render json: @books, meta: pagination(@books)
 
-    if params[:name].present?
-      filtered_books = filtered_books.where("name ILIKE ?", "%#{params[:name]}%")
+    if params[:title].present?
+      filtered_books = filtered_books.where("title ILIKE ?", "%#{params[:title]}%")
     end
 
     if params[:min_price].present? && params[:max_price].present?
