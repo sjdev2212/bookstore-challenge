@@ -7,7 +7,4 @@ class User < ApplicationRecord
   has_many :favorites
   has_many :favorite_books, through: :favorites, source: :book
 
-  def book_in_favorites?(book)
-    favorite_books.include?(book)
-  end
 end
