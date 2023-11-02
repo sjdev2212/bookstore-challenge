@@ -45,7 +45,10 @@
         <div class="field">
       <%= f.label :price %>
       <%= f.number_field  :price  , required: true%>
-    </div>
+    </div class="field">
+     <%= f.file_field :cover %>
+     </div>
+
 <div class="field">
   <%= f.label :publisher_id  , style: "margin-bottom: 0.2vw"%>
   <%= f.collection_select :publisher_id, @publishers, :id, :name, prompt: "Select or Create a Publisher" , style: "width: 10vw" %>

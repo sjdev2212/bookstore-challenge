@@ -1,4 +1,8 @@
 
+
+
+
+
 <main class="edit-book-container">
 <h1 class="edit-title">Edit book</h1>
 <%= form_for @book do |f| %>
@@ -11,8 +15,9 @@
       <%= f.number_field :isbn %>
     </div>
          <div class="field">
+
       <%= f.label :author_name %>
-   <%= f.text_field :author_name, value: @full_name, readonly: true %>
+   <%= f.text_field :author_name, value: @full_name, readonly: false %>
     </div>
          <div class="field">
       <%= f.label :review %>
@@ -26,6 +31,9 @@
       <%= f.label :price %>
       <%= f.number_field  :price %>
     </div>
+        </div class="field">
+     <%= f.file_field :cover %>
+     </div>
 
   <div class="actions">
     <%= f.submit "Update Book", style:"width: 10vw; height:3vw",class:"edit-btn" %>
