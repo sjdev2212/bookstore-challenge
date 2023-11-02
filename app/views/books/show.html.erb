@@ -32,6 +32,10 @@
      <h3>Price: $</h3>
       <p><%= @book.price %></p>
 </div>
+<div class="detail detail-image">
+
+
+</div>
 <div class="detail detail-links">
 <% if can?  :manage, @books, @authors   %>
   <%= link_to "Edit this book", edit_book_path(@book) %>

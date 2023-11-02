@@ -60,6 +60,8 @@ gem 'toastr-rails', '~> 1.0', '>= 1.0.3'
 
 gem 'sidekiq'
 
+gem 'cloudinary'
+
 # Use Sass to process CSS
 # gem "sassc-rails"
 
