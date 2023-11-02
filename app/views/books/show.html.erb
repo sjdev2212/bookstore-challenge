@@ -32,10 +32,7 @@
      <h3>Price: $</h3>
       <p><%= @book.price %></p>
 </div>
-<div class="detail detail-image">
 
-
-</div>
 <div class="detail detail-links">
 <% if can?  :manage, @books, @authors   %>
   <%= link_to "Edit this book", edit_book_path(@book) %>
@@ -49,4 +46,14 @@
   <%end%>
 
 </div>
+
 </section>
+<div class="detail detail-image">
+<% if @book.cover.attached? %>
+  
+    <%= cl_image_tag @book.cover.key, :width=>300, :crop=>"fill" %>
+<% else %>
+  <p>No image available</p>
+<% end %>
+
+</div>
