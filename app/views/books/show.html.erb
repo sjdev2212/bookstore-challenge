@@ -52,7 +52,7 @@
 <section class="book-cover">
 <div class="cover">
 <% if @book.cover.attached? %>
-  <%= cl_image_tag @book.cover.key, :width=>280  ,:height=>440, :crop=>"fill" %>
+  <%= cl_image_tag @book.cover.key, :width=>280  ,:height=>470, :crop=>"fill" %>
 <% else %>
   <p>No image available</p>
 <% end %>
