@@ -1,5 +1,7 @@
 
-<section class="show-book-container">
+<main class="show-book-container">
+
+<section  class="book-show">
 <div class="detail detail-title ">
 <h3>Title:</h3>
 <p><%= @book.title %></p>
@@ -46,14 +48,16 @@
   <%end%>
 
 </div>
-
 </section>
-<div class="detail detail-image">
+<section class="book-cover">
+<div class="cover">
 <% if @book.cover.attached? %>
-  
-    <%= cl_image_tag @book.cover.key, :width=>300, :crop=>"fill" %>
+  <%= cl_image_tag @book.cover.key, :width=>280  ,:height=>400, :crop=>"fill" %>
 <% else %>
   <p>No image available</p>
 <% end %>
 
 </div>
+</section>
+
+</main>
