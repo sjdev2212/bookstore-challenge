@@ -1,6 +1,7 @@
 class Book < ApplicationRecord
   has_one_attached :cover
   belongs_to :author
+  has_many :favorites, dependent: :destroy
   belongs_to :publisher, optional: true
   validates :title, presence: true
   validates :isbn, presence: true, uniqueness: true

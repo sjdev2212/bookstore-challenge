@@ -4,7 +4,7 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    user ||= User.new # Guest user (not logged in)
+    user ||= User.new 
 
     if user.role == 'admin'
       can :manage, :all
@@ -13,6 +13,9 @@ class Ability
       can :home, BooksController
       can :about_modal, Author
       can :review_modal, Book
+      can :create, Favorite
+      can :destroy, Favorite
+
 
       # Add additional permissions as needed
     end

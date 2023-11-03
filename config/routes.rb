@@ -4,12 +4,23 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+  resources :books do
+    resources :favorites, only: [:create, :destroy]
+    member do
+      get 'review_modal', to: 'books#review_modal'
+
+    end
+  end
+
   resources :publishers do
     resources :authors
   end
 
   resources :authors do
-    resources :books
+    resources :books do 
+    end
+  
+
   end
 
   resources :authors do
@@ -18,12 +29,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :books do
-    member do
-      get 'review_modal', to: 'books#review_modal'
-    end
-  end
-  resources :books
+
   resources :authors
 
   root 'books#home'
@@ -38,4 +44,5 @@ Rails.application.routes.draw do
       end
     end
   end
+
 end

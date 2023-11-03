@@ -35,6 +35,11 @@
       <p><%= @book.price %></p>
 </div>
 
+
+<%= link_to 'Add to Favorites', book_favorites_path(@book) %>
+
+
+
 <div class="detail detail-links">
 <% if can?  :manage, @books, @authors   %>
   <%= link_to "Edit this book", edit_book_path(@book) %>
