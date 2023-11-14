@@ -1,3 +1,7 @@
 class BookSerializer < ActiveModel::Serializer
-  attributes *Book.column_names # :id, :title, :author_name, :review, :price, :date_of_publication, :isbn, :publisher_id, :created_at, :updated_at, :new_publisher_name
+  attributes :id, :title, :author, :description, :image, :created_at, :updated_at
+
+  def image
+    object.image.url
+  end
 end
