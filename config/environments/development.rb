@@ -62,7 +62,7 @@ Rails.application.configure do
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
-  config.secret_key_base = 'deb044c02f05919c96a517690385585d93a67ac11f064e711fa805cfc037103588295591501b9768c4d3feee18c92b94d109ea45cbedd7eb88cd3d38c84e6a33'
+
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true
 
