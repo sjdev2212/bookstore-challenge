@@ -18,51 +18,51 @@
 
 ## Live demo deployed on Render
 
-[Bookstore](https://bookstore-qou1.onrender.com/)
+[Bookstore](https://bookstore-0c0a.onrender.com/)
 
 ## Api Endpoints
 
 Get all available books
 
-[https://bookstore-qou1.onrender.com/api/books](https://bookstore-qou1.onrender.com/api/books)
+[https://bookstore-0c0a.onrender.com/api/books](https://bookstore-qou1.onrender.com/api/books)
 
 Get 1 book by id
 
-[https://bookstore-qou1.onrender.com/api/book/:id](https://bookstore-qou1.onrender.com/api/book/5)
+[https://bookstore-0c0a.onrender.com/api/book/:id](https://bookstore-qou1.onrender.com/api/book/5)
 
 Post  book (create book)
 
-[https://bookstore-qou1.onrender.com/api/book](https://bookstore-qou1.onrender.com/api/books)s
+[https://bookstore-0c0a.onrender.com/api/book](https://bookstore-qou1.onrender.com/api/books)s
 
  Put  Update book
 
-[https://bookstore-qou1.onrender.com/api/books/:id](https://bookstore-qou1.onrender.com/api/books/:id)
+[https://bookstore-0c0a.onrender.com/api/books/:id](https://bookstore-qou1.onrender.com/api/books/:id)
 
 Delete book
 
-[https://bookstore-qou1.onrender.com/api/book](https://bookstore-qou1.onrender.com/api/books/:id)s/:id
+[https://bookstore-0c0a.onrender.com/api/book](https://bookstore-qou1.onrender.com/api/books/:id)s/:id
 
 Pagination
 
-[https://bookstore-qou1.onrender.com/api/books?page=1&amp;per_page=5](https://bookstore-qou1.onrender.com/api/books?page=1&per_page=5])
+[https://bookstore-0c0a.onrender.com/api/books?page=1&amp;per_page=5](https://bookstore-0c0a.onrender.com/api/books?page=1&per_page=5])
 
 Filter books by Title
 
 Get
 
-[https://bookstore-qou1.onrender.com/api/books/filter_title?title=norwegian](https://bookstore-qou1.onrender.com/api/books/filter_title?title=norwegian)
+[https://bookstore-0c0a.onrender.com/api/books/filter_title?title=norwegian](https://bookstore-qou1.onrender.com/api/books/filter_title?title=norwegian)
 
 Filter by price range
 
 Get
 
-[https://bookstore-qou1.onrender.com/api/books/filter_price?min_price=1&amp;max_price=10](https://bookstore-qou1.onrender.com/api/books/filter_price?min_price=1&amp;&max_price=10)
+[https://bookstore-0c0a.onrender.com/api/books/filter_price?min_price=1&amp;max_price=10](https://bookstore-qou1.onrender.com/api/books/filter_price?min_price=1&amp;&max_price=10)
 
 Filter by author name
 
 Get
 
-[https://bookstore-qou1.onrender.com/api/books/filter_author?author=kin](https://bookstore-qou1.onrender.com/api/books/filter_author?author=king)g
+[https://bookstore-0c0a.onrender.com/api/books/filter_author?author=kin](https://bookstore-qou1.onrender.com/api/books/filter_author?author=king)g
 
 ## Built With
 
