@@ -44,7 +44,7 @@
     </div>
         <div class="field">
       <%= f.label :price %>
-      <%= f.number_field  :price  , required: true%>
+      <%= f.number_field  :price  , step: :any, required: true%>
     </div class="field">
      <%= f.file_field :cover %>
      </div>
