@@ -1375,14 +1375,18 @@ text-align: center;
     transition: 1s;
 }
 .add-book-link{
+display: flex;
+flex-direction: row;
+justify-content: start;
+align-items: center;
+align-content: center;
+}
+.add-book-link a{
     text-decoration: none;
     color: rgb(50, 31, 131);
     cursor: pointer;
     padding-right: 3vw ;
     margin-top: 1vw;
-    position: relative;
-    left: 38vw;
-    top: 1vw
 }
 /*  ----publishers----*/
 .publishers-container{
