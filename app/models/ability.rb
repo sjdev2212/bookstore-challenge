@@ -13,8 +13,7 @@ class Ability
       can :home, BooksController
       can :about_modal, Author
       can :review_modal, Book
-      can :create, Favorite
-      can :destroy, Favorite
+    
 
 
       # Add additional permissions as needed
