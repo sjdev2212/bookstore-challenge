@@ -52,7 +52,7 @@ Get
 
 [https://bookstore-0c0a.onrender.com/api/books/filter_title?title=norwegian](https://bookstore-qou1.onrender.com/api/books/filter_title?title=norwegian)
 
-Filter by prices range
+Filter by price range
 
 Get
 
