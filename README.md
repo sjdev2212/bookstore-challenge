@@ -46,7 +46,7 @@ Pagination
 
 [https://bookstore-0c0a.onrender.com/api/books?page=1&amp;per_page=5](https://bookstore-0c0a.onrender.com/api/books?page=1&per_page=5])
 
-Filter books by Title
+Filter books by Titles
 
 Get
 
