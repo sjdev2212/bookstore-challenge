@@ -16,9 +16,6 @@
 
  Application buit with Ruby on Rails
 
-## Live demo deployed on Render
-
-[Bookstore](https://bookstore-0c0a.onrender.com/)
 
 ## Api Endpoints
 
